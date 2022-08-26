@@ -3,7 +3,7 @@ Ordered Dict → Dicionário Ordenado
 Módulo Collections
 High-performance Container Datatypes
 
-# Em um dicionário a ordem de um dicionário, a ordem de inserção dos elementos não é garantida,
+# Em um dicionário, a ordem de inserção dos elementos não é garantida,
 mesmo que ele informe corretamente a ordem como foi informada, isso pode mudar.
 
 from collections import OrderedDict
