@@ -1,3 +1,6 @@
+"""
+48) Leia um valor inteiro em segundos, e imprima-o em horas, minutos e segundos
+"""
 seg = float(input('Informe um valor em segundos: ').strip())
 seg = seg % (24 * 3600)
 hor = seg // 3600

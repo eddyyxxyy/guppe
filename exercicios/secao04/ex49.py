@@ -1,3 +1,8 @@
+"""
+49) Faça um programa para ler o horário (hora, minuto e segundo)
+de ínicio e duração em segundos, de uma experiência biológica.
+O programa deve resultar com o novo horário (hora, minuto e segundo) do término da mesma.
+"""
 print('Preencha os campos abaixo com o horário atual:')
 hour = int(input('Hora: '))
 minute = int(input('Minuto: '))
