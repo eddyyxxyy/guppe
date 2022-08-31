@@ -2,7 +2,41 @@
 9) Faça um programa que leia um número inteiro N e depois imprima
 os N primeiros números naturais ímpares
 """
+from locale import atoi, format_string
+from collections.abc import Iterator
 
+
+def first_n_oddnumbers(n: int) -> Iterator[int]:
+    i: int = 0
+    odd: int = 1
+    while i < n:
+        yield odd
+        i += 1
+        odd += 2
+
+
+def main():
+    while True:
+        try:
+            n = atoi(input('Number of odd numbers to be shown: '))
+            break
+        except ValueError:
+            print('Invalid number! Try again...')
+    numbers = tuple(first_n_oddnumbers(n))
+    formatted_numbers = ", ".join(
+        format_string("%d", x) for x in numbers
+    )
+    print(
+        f'\nFirst {n} natural odd numbers:'
+        f'\n→ {formatted_numbers}'
+    )
+
+
+if __name__ == '__main__':
+    main()
+
+"""
+# Minha antiga solução:
 print(
     '=' * 19 + '\n' +
     'N NÚMEROS IMPARES'.center(19, '-') + '\n' +
@@ -40,3 +74,4 @@ while True:
             break
     if continuar == 'n':
         break
+"""
