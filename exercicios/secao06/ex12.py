@@ -7,8 +7,8 @@ from collections.abc import Iterator
 from locale import atoi, format_string
 
 
-def n_natural_numbers(times: int, inverse: bool = True) -> Iterator[int]:
-    if not inverse:
+def n_natural_numbers(times: int, inverse: bool = False) -> Iterator[int]:
+    if inverse:
         for number in range(0, times + 1):
             yield number
     else:
@@ -17,16 +17,21 @@ def n_natural_numbers(times: int, inverse: bool = True) -> Iterator[int]:
 
 
 def main():
+    print('All the numbers till "n"')
     while True:
         try:
-            times: int = atoi(input('How many even numbers you want to sum?\n-> '))
+            times: int = atoi(input('Enter a number:\n-> '))
+            if times <= 0:
+                print('Invalid input! Try again...')
+                continue
             break
         except ValueError:
             print('Invalid input! Try again...')
     while True:
         try:
-            inverse: int = atoi(input('(0)Ascending or (1)Descending?\n-> '))
+            inverse: int = atoi(input('(1)Ascending or (0)Descending?\n-> '))
             if inverse != 0 and inverse != 1:
+                print('Invalid input! Try again...')
                 continue
             break
         except ValueError:
