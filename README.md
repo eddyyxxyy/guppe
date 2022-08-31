@@ -34,7 +34,7 @@ ferramentas de forma simultânea e complementar.
 ### E, no presente momento...
 
 Este repositório representa meus estudos nos cursos de Python e Git integrados à IDE PyCharm. Talvez seja de 
-alguma ajuda aos outros alunos que procurarem pela resolução de alguém dos exercícios passados nas respectivas seções do
+alguma ajuda aos outros alunos que procurarem pela resolução de algum dos exercícios passados nas respectivas seções do
 curso "Programação em Python do básico ao avançado"; espero que de alguma serventia tenha — além da dedicação à produção
 de material para revisão e fixação dos conteúdos estudados — para outrem.
 
