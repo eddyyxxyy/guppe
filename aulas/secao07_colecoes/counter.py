@@ -4,7 +4,7 @@ Módulo Collections - Counter
 Collections → High-performance Container Datatypes
 
 Counter → Recebe um iterável como parâmetro e cria um objeto do tipo Collections Counter que é parecido com um
-dicionário, contendo como chave o elemento da lista passada como parâmetro e como valor a quantidade e ocorrências
+dicionário, contendo como chave o elemento da lista passada como parâmetro e como valor a quantidade de ocorrências
 desse elemento.
 
 # Utilizando o counter
