@@ -7,15 +7,18 @@ from locale import atoi, setlocale, LC_ALL, format_string
 
 
 def get_ints(n: int) -> Iterator[int]:
-    count: int = 1
+    """
+    Input n integers and yields the value n times
+    :param n: int
+    :return: Iterator[int]
+    """
     for i in range(n):
         while True:
             try:
                 number = atoi(
-                    input(f'Enter the {count}º integer:\n-> ').strip()
+                    input(f'Enter the {i + 1}º integer:\n-> ').strip()
                 )
                 yield number
-                count += 1
                 break
             except ValueError:
                 print('Invalid number! Try again...')
