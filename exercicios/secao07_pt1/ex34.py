@@ -7,7 +7,6 @@ digitar outro número. Note que cada valor digitado pelo usuário deve
 ser pesquisado no vetor, verificando se ele existe entre os números que
 já foram fornecidos. Exibir na tela o vetor final que foi digitado.
 """
-from collections import deque
 from collections.abc import Iterator
 from locale import setlocale, LC_ALL, atof, format_string
 
@@ -16,33 +15,32 @@ def get_non_repeated_numbers(n: int) -> Iterator[float]:
     """
     Yields n float values to return Iterator
     :param n: int
-    :return: Iterator[float]
+    :return: set[float]
     """
-    numbers = deque()
+    numbers = set()
     for i in range(n):
         while True:
             try:
                 number = atof(
                     input(f'Enter the {i + 1}º number:\n-> ')
                 )
-                if number not in numbers:
-                    numbers.append(number)
-                    yield number
-                    break
-                else:
+                if number in numbers:
                     raise ValueError
+                numbers.add(number)
+                yield number
+                break
             except ValueError:
                 print('Invalid number! Try again...\n')
 
 
 def main():
     setlocale(LC_ALL, 'pt_BR.UTF-8')
-    v = tuple(get_non_repeated_numbers(10))
+    v = tuple(sorted(get_non_repeated_numbers(10)))
     print(
         '\nArray V values:'
         '\n->', ', '.join(
             format_string("%.1f", x) for x in v
-        ), end= '.'
+        ), end='.'
     )
 
 
