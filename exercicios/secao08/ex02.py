@@ -8,6 +8,12 @@ from locale import setlocale, LC_ALL
 
 
 def this_day() -> str:
+    """
+    Returns the current day, month and year of your os
+    according to your locale in str
+
+    :return: '<day> of <month> of <year>' -> str
+    """
     now = date.today()
     return now.strftime('%d de %B de %Y')
 
