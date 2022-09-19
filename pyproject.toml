@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "guppe"
+version = "0.1.0"
+description = ""
+authors = ["Edson Pimenta <edson.tibo@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.23.3"
+
+
+[tool.poetry.group.dev.dependencies]
+pipdeptree = "^2.3.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
