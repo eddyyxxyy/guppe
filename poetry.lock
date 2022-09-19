@@ -7,6 +7,26 @@ optional = false
 python-versions = ">=3.8"
 
 [[package]]
+name = "pip"
+version = "22.2.2"
+description = "The PyPA recommended tool for installing Python packages."
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
+name = "pip-autoremove"
+version = "0.10.0"
+description = "Remove a package and its unused dependencies"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+pip = "*"
+setuptools = "*"
+
+[[package]]
 name = "pipdeptree"
 version = "2.3.1"
 description = "Command line utility to show dependency tree of packages."
@@ -18,10 +38,23 @@ python-versions = ">=3.7"
 graphviz = ["graphviz (>=0.20.1)"]
 test = ["covdefaults (>=2.2)", "diff-cover (>=6.5.1)", "pip (>=22.2.2)", "pytest (>=7.1.3)", "pytest-cov (>=3)", "pytest-mock (>=3.8.2)", "virtualenv (>=20.16.5,<21)"]
 
+[[package]]
+name = "setuptools"
+version = "65.3.0"
+description = "Easily download, build, install, upgrade, and uninstall Python packages"
+category = "dev"
+optional = false
+python-versions = ">=3.7"
+
+[package.extras]
+docs = ["furo", "jaraco.packaging (>=9)", "jaraco.tidelift (>=1.4)", "pygments-github-lexers (==0.0.5)", "rst.linker (>=1.9)", "sphinx", "sphinx-favicon", "sphinx-hoverxref (<2)", "sphinx-inline-tabs", "sphinx-notfound-page (==0.8.3)", "sphinx-reredirects", "sphinxcontrib-towncrier"]
+testing = ["build[virtualenv]", "filelock (>=3.4.0)", "flake8 (<5)", "flake8-2020", "ini2toml[lite] (>=0.9)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "mock", "pip (>=19.1)", "pip-run (>=8.8)", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=1.3)", "pytest-flake8", "pytest-mypy (>=0.9.1)", "pytest-perf", "pytest-xdist", "tomli-w (>=1.0.0)", "virtualenv (>=13.0.0)", "wheel"]
+testing-integration = ["build[virtualenv]", "filelock (>=3.4.0)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "pytest", "pytest-enabler", "pytest-xdist", "tomli", "virtualenv (>=13.0.0)", "wheel"]
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "b969ace4a177566ef05be57ac6299033ad25b1d06802c5aeadfe0feb26c0fd2d"
+content-hash = "7ff9ab7b803dec91bc4da20d677c0208724312f532acaa1a3ef6ef9a9b4d3e0a"
 
 [metadata.files]
 numpy = [
@@ -54,7 +87,19 @@ numpy = [
     {file = "numpy-1.23.3-pp38-pypy38_pp73-win_amd64.whl", hash = "sha256:94c15ca4e52671a59219146ff584488907b1f9b3fc232622b47e2cf832e94fb8"},
     {file = "numpy-1.23.3.tar.gz", hash = "sha256:51bf49c0cd1d52be0a240aa66f3458afc4b95d8993d2d04f0d91fa60c10af6cd"},
 ]
+pip = [
+    {file = "pip-22.2.2-py3-none-any.whl", hash = "sha256:b61a374b5bc40a6e982426aede40c9b5a08ff20e640f5b56977f4f91fed1e39a"},
+    {file = "pip-22.2.2.tar.gz", hash = "sha256:3fd1929db052f056d7a998439176d3333fa1b3f6c1ad881de1885c0717608a4b"},
+]
+pip-autoremove = [
+    {file = "pip-autoremove-0.10.0.tar.gz", hash = "sha256:1328c6f6ef54b1ea51dd4dd78199d7f8b27c2344e9517fbb4f89edf3bfbb32ba"},
+    {file = "pip_autoremove-0.10.0-py2.py3-none-any.whl", hash = "sha256:093c7d9d73c66c191cbaac159bf32a0b2e7cdbc108f1935dacb5d5e09bee9eca"},
+]
 pipdeptree = [
     {file = "pipdeptree-2.3.1-py3-none-any.whl", hash = "sha256:fc0ffc6fd69f6f19e68bfd7722e5b4f66cc2b49a1be42ac7a3e8b4fd9f469370"},
     {file = "pipdeptree-2.3.1.tar.gz", hash = "sha256:30699521e1c5861b08d29d92398f67e9a5d7f613092257fff2a8bde3c948e05b"},
+]
+setuptools = [
+    {file = "setuptools-65.3.0-py3-none-any.whl", hash = "sha256:2e24e0bec025f035a2e72cdd1961119f557d78ad331bb00ff82efb2ab8da8e82"},
+    {file = "setuptools-65.3.0.tar.gz", hash = "sha256:7732871f4f7fa58fb6bdcaeadb0161b2bd046c85905dbaa066bdcbcc81953b57"},
 ]
