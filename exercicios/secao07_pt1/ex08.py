@@ -4,7 +4,7 @@ na tela os valores lidos na ordem inversa
 """
 from collections import deque
 from collections.abc import Iterator
-from locale import atoi, setlocale, LC_ALL, format_string
+from locale import LC_ALL, atoi, format_string, setlocale
 
 
 def get_even_ints(n: int) -> Iterator[int]:
@@ -25,16 +25,13 @@ def get_even_ints(n: int) -> Iterator[int]:
 def main():
     setlocale(LC_ALL, 'pt_BR.UTF-8')
     numbers = deque(get_even_ints(6))
-    formatted_numbers = ', '.join(
-        format_string('%d', x) for x in numbers
-    )
+    formatted_numbers = ', '.join(format_string('%d', x) for x in numbers)
     numbers.reverse()
     formatted_numbers_inverted = ', '.join(
         format_string('%d', x) for x in numbers
     )
     print(
-        '-' * 30 +
-        '\nNumbers:'
+        '-' * 30 + '\nNumbers:'
         f'\n-> {formatted_numbers}.'
         '\nInverted numbers:'
         f'\n-> {formatted_numbers_inverted}.'

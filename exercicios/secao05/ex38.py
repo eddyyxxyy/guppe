@@ -15,30 +15,36 @@ mes: int = 0
 dia: int = 0
 
 print(
-    '=' * 31 + '\n' +
-    'VALIDADOR DE DATA'.center(31, '-') + '\n' +
-    '=' * 31 + '\n'
+    '=' * 31
+    + '\n'
+    + 'VALIDADOR DE DATA'.center(31, '-')
+    + '\n'
+    + '=' * 31
+    + '\n'
 )
 while True:
     try:
-        ano = int(input('Digite o ano do seu nascimento:\n'
-                        '->  ').strip())
+        ano = int(input('Digite o ano do seu nascimento:\n' '->  ').strip())
     except ValueError:
         print('\nAno inválido!\n')
         continue
     else:
         while True:
             try:
-                mes = int(input('Digite o mês do seu nascimento:\n'
-                                '->  ').strip())
+                mes = int(
+                    input('Digite o mês do seu nascimento:\n' '->  ').strip()
+                )
             except ValueError:
                 print('\nMês inválido!\n')
                 continue
             else:
                 while True:
                     try:
-                        dia = int(input('Digite o dia do seu nascimento:\n'
-                                        '->  ').strip())
+                        dia = int(
+                            input(
+                                'Digite o dia do seu nascimento:\n' '->  '
+                            ).strip()
+                        )
                     except ValueError:
                         print('\nDia inválido!\n')
                         continue

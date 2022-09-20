@@ -19,4 +19,3 @@ Em dicionários comuns, a ordem dos elementos não importa, um dicionário que d
 que outro são reconhecidos como a mesma coisa. Se os dicionários forem Ordered, eles só vão reconhecer
 dois dicionários como iguais se tiverem os mesmos elementos na mesma ordem.
 """
-

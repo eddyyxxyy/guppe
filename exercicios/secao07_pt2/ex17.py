@@ -6,7 +6,7 @@ nota foi na prova 3. Em caso de empate das piores notas de um aluno,
 o critério de desempate é arbitrário, mas o aluno
 deve ser contabilizado apenas uma vez.
 """
-from locale import setlocale, LC_ALL, atof
+from locale import LC_ALL, atof, setlocale
 
 from numpy import asarray
 
@@ -18,9 +18,7 @@ def get_float_array(rows: int, columns: int) -> list[list]:
         for j in range(columns):
             while True:
                 try:
-                    value = atof(
-                        input(f'Enter no. for [{i},{j}]:\n-> ')
-                    )
+                    value = atof(input(f'Enter no. for [{i},{j}]:\n-> '))
                     if value < 0 or value > 10:
                         raise ValueError
                     break

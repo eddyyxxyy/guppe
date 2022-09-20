@@ -141,5 +141,4 @@ with tempfile.TemporaryFile() as tmp:
     print(tmp.read())
 
 # OBS: Em arquivos temporários só conseguimos escrever bits. Por isso, utilizamos b''.
-
 """

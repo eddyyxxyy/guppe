@@ -23,13 +23,18 @@ salario_atual: float = 0
 tempo_servico: int = 0
 
 print(
-    '=' * 31 + '\n' +
-    'REAJUSTE SALARIAL'.center(31, '-') + '\n' +
-    '=' * 31 + '\n'
+    '=' * 31
+    + '\n'
+    + 'REAJUSTE SALARIAL'.center(31, '-')
+    + '\n'
+    + '=' * 31
+    + '\n'
 )
 while True:
     try:
-        salario_atual = float(input('Salário atual: R$').strip().replace(',', '.'))
+        salario_atual = float(
+            input('Salário atual: R$').strip().replace(',', '.')
+        )
     except ValueError:
         print('Valor inválido! Informe novamente...\n')
         continue
@@ -54,31 +59,36 @@ if salario_atual <= 500:
     print(
         f'Seu reajuste é de 25% sobre o salário: R${real_br_money_mask(salario_atual)};\n'
         f'Salario com reajuste: R${real_br_money_mask(salario_atual * 1.25)}\n'
-        'Com o bônus por tempo de serviço: ', end=''
+        'Com o bônus por tempo de serviço: ',
+        end='',
     )
 elif 500 < salario_atual <= 1000:
     print(
         f'Seu reajuste é de 20% sobre o salário: R${real_br_money_mask(salario_atual)};\n'
         f'Salario com reajuste: R${real_br_money_mask(salario_atual * 1.2)}\n'
-        'Com o bônus por tempo de serviço: ', end=''
+        'Com o bônus por tempo de serviço: ',
+        end='',
     )
 elif 1000 < salario_atual <= 1500:
     print(
         f'Seu reajuste é de 15% sobre o salário: R${real_br_money_mask(salario_atual)};\n'
         f'Salario com reajuste: R${real_br_money_mask(salario_atual * 1.15)}\n'
-        'Com o bônus por tempo de serviço: ', end=''
+        'Com o bônus por tempo de serviço: ',
+        end='',
     )
 elif 1500 < salario_atual <= 2000:
     print(
         f'Seu reajuste é de 10% sobre o salário: R${real_br_money_mask(salario_atual)};\n'
         f'Salario com reajuste: R${real_br_money_mask(salario_atual * 1.1)}\n'
-        'Com o bônus por tempo de serviço: ', end=''
+        'Com o bônus por tempo de serviço: ',
+        end='',
     )
 else:
     print(
         f'Sem reajuste sobre o salário: R${real_br_money_mask(salario_atual)};\n'
         f'Salario: R${real_br_money_mask(salario_atual)}\n'
-        'Com o bônus por tempo de serviço: ', end=''
+        'Com o bônus por tempo de serviço: ',
+        end='',
     )
 
 if tempo_servico < 1:

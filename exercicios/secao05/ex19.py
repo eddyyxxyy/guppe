@@ -2,7 +2,13 @@
 19) Faça um programa para verificar se um determinado número
 inteiro é divisível por 3 ou 5, mas não simultaneamente pelos dois.
 """
-print('-=' * 15 + '\n' + 'Verificador de Divisores'.center(30, '-') + '\n' + '=-' * 15)
+print(
+    '-=' * 15
+    + '\n'
+    + 'Verificador de Divisores'.center(30, '-')
+    + '\n'
+    + '=-' * 15
+)
 while True:
     try:
         n: int = int(input('Informe um número inteiro: ').strip())

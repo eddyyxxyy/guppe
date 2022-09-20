@@ -12,17 +12,24 @@ de conceito.
 nota: float = 0
 faltas: int = 0
 print(
-    '=' * 30 + '\n' +
-    'CONCEITO CURRiCULAR'.center(30, '-') + '\n'
-    + '=' * 30 + '\n'
+    '=' * 30
+    + '\n'
+    + 'CONCEITO CURRiCULAR'.center(30, '-')
+    + '\n'
+    + '=' * 30
+    + '\n'
 )
 while True:
     try:
-        nota = float(input(
-            'Qual foi sua nota nesse semestre? \033[37m'
-            'Entre 0.0 e 10.0\033[m\n'
-            '->  ').strip().replace(',', '.')
+        nota = float(
+            input(
+                'Qual foi sua nota nesse semestre? \033[37m'
+                'Entre 0.0 e 10.0\033[m\n'
+                '->  '
             )
+            .strip()
+            .replace(',', '.')
+        )
     except ValueError:
         print('\nNota inválida! Tente novamente...\n')
         continue
@@ -32,19 +39,17 @@ while True:
             continue
         while True:
             try:
-                faltas = int(input(
-                    'Quantas faltas nesse semestre?\n'
-                    '->  ')
-                             .strip().replace(',', '.')
+                faltas = int(
+                    input('Quantas faltas nesse semestre?\n' '->  ')
+                    .strip()
+                    .replace(',', '.')
                 )
             except ValueError:
-                print('\nNúmero de faltas inválido!'
-                      ' Tente novamente...\n')
+                print('\nNúmero de faltas inválido!' ' Tente novamente...\n')
                 continue
             else:
                 if faltas < 0:
-                    print('\nNota inválida!'
-                          ' Tente novamente...\n')
+                    print('\nNota inválida!' ' Tente novamente...\n')
                     continue
                 break
     break

@@ -4,7 +4,7 @@ na tela no formato textual por extenso. Exemplo: Data: 01/01/2000, Imprimir:
 1 de janeiro de 2000.
 """
 from datetime import date
-from locale import setlocale, LC_ALL
+from locale import LC_ALL, setlocale
 
 
 def this_day() -> str:

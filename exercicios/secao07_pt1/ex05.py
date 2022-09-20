@@ -17,9 +17,7 @@ def get_float(msg: str) -> float:
 def main():
     numbers = deque()
     for i in range(10):
-        numbers.append(
-            get_float(f'Enter {i + 1}º number:\n-> ')
-        )
+        numbers.append(get_float(f'Enter {i + 1}º number:\n-> '))
     formatted_numbers = ', '.join(
         format_string('%.1f', num) for num in numbers
     )
@@ -28,7 +26,7 @@ def main():
         '\nNumbers:'
         f'\n-> {formatted_numbers}'
         '\nAmount of even numbers:\n->',
-        len([number for number in numbers if number % 2 == 0])
+        len([number for number in numbers if number % 2 == 0]),
     )
 
 

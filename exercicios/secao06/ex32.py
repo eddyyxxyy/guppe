@@ -18,7 +18,9 @@ def get_integer(msg: str = 'Enter an integer:\n-> ') -> int:
 
 
 def throw_dice() -> Iterator[tuple]:
-    times_thrown = get_integer('Enter the number of times you want to throw the dices:\n-> ')
+    times_thrown = get_integer(
+        'Enter the number of times you want to throw the dices:\n-> '
+    )
     for times in range(times_thrown):
         d1 = randint(1, 6)
         d2 = randint(1, 6)
@@ -28,10 +30,7 @@ def throw_dice() -> Iterator[tuple]:
 def main():
     throws = tuple(throw_dice())
     for index, throw in enumerate(throws):
-        print(
-            f'\n{index + 1}º throw:'
-            f'\n-> {throw}', end=''
-        )
+        print(f'\n{index + 1}º throw:' f'\n-> {throw}', end='')
         if throw[0] == throw[1]:
             print(' -> Same numbers')
         else:

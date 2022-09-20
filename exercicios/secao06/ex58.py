@@ -3,7 +3,7 @@
 e b, onde a e b são números informados pelo usuário.
 """
 from collections.abc import Iterator
-from locale import setlocale, LC_ALL, format_string
+from locale import LC_ALL, format_string, setlocale
 
 
 def get_pos_int(msg: str) -> int:
@@ -32,12 +32,9 @@ def main() -> None:
     lower = get_pos_int('Enter an positive integer:\n-> ')
     upper = get_pos_int('Enter an positive integer:\n-> ')
     result = tuple(prime_range(lower, upper))
-    formatted_result = ', '.join(
-        format_string('%d', x) for x in result
-    )
+    formatted_result = ', '.join(format_string('%d', x) for x in result)
     print(
-        '\n' + '-' * 30 + '\n' +
-        f'\nBetween {lower} and {upper}:'
+        '\n' + '-' * 30 + '\n' + f'\nBetween {lower} and {upper}:'
         f'\n-> {len(result)} prime numbers;'
         '\n\nThe numbers between:'
         f'\n-> {formatted_result}.'

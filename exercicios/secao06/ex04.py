@@ -14,10 +14,7 @@ def zero_to_nthousand(stop: int = 100_000) -> Iterator[int]:
 
 def main() -> None:
     numbers = tuple(zero_to_nthousand())
-    print(
-        'Valores de 0 a 100 mil:'
-        f'\n{numbers}'
-    )
+    print('Valores de 0 a 100 mil:' f'\n{numbers}')
 
 
 if __name__ == '__main__':

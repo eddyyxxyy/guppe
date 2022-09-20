@@ -17,12 +17,12 @@ Exemplos:
 # - Aspas duplas triplas → """Edson"""
 
 # Entrada de dados
-print("Qual seu nome? ")
+print('Qual seu nome? ')
 nome = input()  # Input → Entrada
 
 print(f'Seja bem vindo(a), {nome}!')
 
-print("Qual sua idade? ")
+print('Qual sua idade? ')
 idade = input()
 
 # Processamento

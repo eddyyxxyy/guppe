@@ -3,7 +3,7 @@
 calcule e imprima a média geral.
 """
 from collections.abc import Iterator
-from locale import atof, setlocale, LC_ALL
+from locale import LC_ALL, atof, setlocale
 
 
 def get_floats(n: int) -> Iterator[float]:
@@ -11,9 +11,7 @@ def get_floats(n: int) -> Iterator[float]:
     for i in range(n):
         while True:
             try:
-                number = atof(
-                    input(f'Enter the {count}º grade:\n-> ')
-                )
+                number = atof(input(f'Enter the {count}º grade:\n-> '))
                 if number < 0 or number > 10:
                     raise ValueError
                 yield number
@@ -25,10 +23,7 @@ def get_floats(n: int) -> Iterator[float]:
 def main():
     setlocale(LC_ALL, 'pt_BR.UTF-8')
     numbers = tuple(get_floats(15))
-    print(
-        '-' * 30 +
-        f'\nAverage from grades: {sum(numbers) / len(numbers)}'
-    )
+    print('-' * 30 + f'\nAverage from grades: {sum(numbers) / len(numbers)}')
 
 
 if __name__ == '__main__':

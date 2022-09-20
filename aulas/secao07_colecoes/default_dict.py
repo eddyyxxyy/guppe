@@ -31,5 +31,4 @@ print(dicionario)
 print(dicionario['outro'])  # se fosse um dicionário comum daria KeyError
 
 print(dicionario)
-
 """

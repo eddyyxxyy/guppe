@@ -6,8 +6,6 @@ ATENÇÃO: Para ler ou escrever dados em arquivos do sistema operacional, o soft
     - Permissão de escrita para escrever o arquivo;
 
 StringIO -> Utilizado para ler e criar arquivos em memória!
-
-
 """
 
 # Primeiro fazemos o import

@@ -6,7 +6,9 @@ from math import sqrt
 
 n = float(input('Informe um número real: ').strip().replace(',', '.'))
 if n == 0:
-    print('O número 0 é não possui raiz quadrada e, se elevado ao quadrado, também resulta em 0.')
+    print(
+        'O número 0 é não possui raiz quadrada e, se elevado ao quadrado, também resulta em 0.'
+    )
 elif n > 0:
     print(f'A raiz quadrada de {n} é {sqrt(n)}')
 else:

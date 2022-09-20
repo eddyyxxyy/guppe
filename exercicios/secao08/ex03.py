@@ -3,7 +3,7 @@
 Sendo que o valor de retorno será 1 se positivo, -1 se negativo
 e 0 se for igual a 0
 """
-from locale import setlocale, LC_ALL
+from locale import LC_ALL, setlocale
 
 
 def check_number(n: int) -> int:

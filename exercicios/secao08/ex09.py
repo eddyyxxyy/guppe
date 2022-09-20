@@ -3,21 +3,19 @@
 retorne o volume do cilindro. O volume de um cilindro circular é calculado por meio
 da seguinte fórmula: V = pi * (raio ** 2) * altura, onde r = 3.141592
 """
-from locale import atof, setlocale, LC_ALL
+from locale import LC_ALL, atof, setlocale
 
 from numpy import pi
 
 
 def cylinder_vol(h: float, r: float) -> float:
-    return pi * (r ** 2) * h
+    return pi * (r**2) * h
 
 
 def get_float(name: str, only_positive: bool = False) -> float:
     while True:
         try:
-            value = atof(
-                input(f'Enter {name}:\n-> ')
-            )
+            value = atof(input(f'Enter {name}:\n-> '))
             if only_positive:
                 if value <= 0:
                     raise ValueError

@@ -3,13 +3,13 @@
 Calcule e retorne o resultado de X elevado a Z para o programa principal.
 Atenção não utilize nenhuma função pronta de exponenciação.
 """
-from locale import setlocale, LC_ALL
+from locale import LC_ALL, setlocale
 
 from exercicios.secao08.ex09 import get_float
 
 
 def calc(x, z):
-    return x ** z
+    return x**z
 
 
 def main() -> None:

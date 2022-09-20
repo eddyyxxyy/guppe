@@ -17,9 +17,7 @@ def get_number(msg: str) -> int:
 def main() -> None:
     values = deque()
     for i in range(6):
-        values.append(
-            get_number(f'Enter {i + 1}º integer:\n-> ')
-        )
+        values.append(get_number(f'Enter {i + 1}º integer:\n-> '))
     print('\nValues:\n-> ', end='')
     print(*values, sep=',', end='.')
 

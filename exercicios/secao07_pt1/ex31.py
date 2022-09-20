@@ -5,7 +5,7 @@ que contém os números dos dois vetores. Não deve conter números
 repetidos.
 """
 from collections.abc import Iterator
-from locale import setlocale, LC_ALL, atof, format_string
+from locale import LC_ALL, atof, format_string, setlocale
 
 
 def get_floats(n: int) -> Iterator[float]:
@@ -17,9 +17,7 @@ def get_floats(n: int) -> Iterator[float]:
     for i in range(n):
         while True:
             try:
-                number = atof(
-                    input(f'Enter the {i + 1}º number:\n-> ')
-                )
+                number = atof(input(f'Enter the {i + 1}º number:\n-> '))
                 yield number
                 break
             except ValueError:
@@ -33,18 +31,11 @@ def main():
     v2 = tuple(get_floats(10))
     v3: set = set(v1).union(v2)
     print(
-        '\nV1:'
-        f'\n->', ', '.join(
-            format_string('%.1f', x) for x in v1
-        ) +
-        '\nV2:'
-        f'\n->', ', '.join(
-            format_string('%.1f', x) for x in v2
-        ) +
-        '\nV3 (Union V1-V2):'
-        f'\n->', ', '.join(
-            format_string('%.1f', x) for x in v3
-        )
+        '\nV1:' f'\n->',
+        ', '.join(format_string('%.1f', x) for x in v1) + '\nV2:' f'\n->',
+        ', '.join(format_string('%.1f', x) for x in v2) + '\nV3 (Union V1-V2):'
+        f'\n->',
+        ', '.join(format_string('%.1f', x) for x in v3),
     )
 
 

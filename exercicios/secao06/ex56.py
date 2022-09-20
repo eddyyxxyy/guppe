@@ -5,7 +5,7 @@ abaixo de dois milhões.
 # Crivo de Eratóstenes aplicado
 """
 from collections.abc import Iterator
-from locale import setlocale, LC_ALL
+from locale import LC_ALL, setlocale
 
 
 def sum_primes(n):
@@ -14,7 +14,7 @@ def sum_primes(n):
     for p in range(2, n):
         if sieve[p]:
             sum_prime += p
-            for i in range(p*p, n, p):
+            for i in range(p * p, n, p):
                 sieve[i] = False
     return sum_prime
 
@@ -22,10 +22,7 @@ def sum_primes(n):
 def main() -> None:
     prime_sum = sum_primes(2000000)
     setlocale(LC_ALL, 'pt-BR')
-    print(
-        'Sum of all prime numbers below 2 million:'
-        f'\n-> {prime_sum:n}'
-    )
+    print('Sum of all prime numbers below 2 million:' f'\n-> {prime_sum:n}')
 
 
 if __name__ == '__main__':

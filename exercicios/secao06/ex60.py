@@ -9,7 +9,7 @@
 Finalize a entrada de dados caso o usuário informe o valor 0.
 """
 from collections.abc import Iterator
-from locale import atoi, setlocale, LC_ALL, format_string
+from locale import LC_ALL, atoi, format_string, setlocale
 
 
 def get_numbers(msg: str) -> Iterator[int]:
@@ -27,16 +27,14 @@ def main() -> None:
     setlocale(LC_ALL, 'pt-BR')
     numbers = tuple(
         get_numbers(
-            'Enter an integer: \033[37m0 or less to stop\033[m'
-            '\n-> '
+            'Enter an integer: \033[37m0 or less to stop\033[m' '\n-> '
         )
     )
     formatted_numbers = ', '.join(
         format_string('%d', x) for x in numbers if len(numbers) >= 1
     )
     print(
-        '-' * 30 + '\n' +
-        '\nNumbers:'
+        '-' * 30 + '\n' + '\nNumbers:'
         f"\n-> {formatted_numbers if formatted_numbers != '' else '..'}."
         '\na) Sum of all numbers:'
         f'\n-> {sum(numbers)}'

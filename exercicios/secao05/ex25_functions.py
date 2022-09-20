@@ -1,8 +1,8 @@
 def raizes(a: float, b: float, c: float):
     """Takes in 3 args and calculate x1 and x2"""
-    D = (b**2 - 4*a*c)
-    x1 = (-b + D**(1/2)) / (2*a)
-    x2 = (-b - D**(1/2)) / (2*a)
+    D = b**2 - 4 * a * c
+    x1 = (-b + D ** (1 / 2)) / (2 * a)
+    x2 = (-b - D ** (1 / 2)) / (2 * a)
     print(f'Valor de delta: {D}')
     if D < 0:
         print('\nNão existe raiz real!')

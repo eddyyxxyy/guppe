@@ -2,8 +2,8 @@
 7) Faça um programa que leia 10 inteiros positivos, ignorando não positivos,
 e imprima sua média
 """
-from locale import atoi
 from collections.abc import Iterator
+from locale import atoi
 
 
 def get_numbers(n: int) -> Iterator[int]:
@@ -25,11 +25,7 @@ def main() -> None:
             print('Invalid input! Try again...')
     numbers = tuple(get_numbers(times))
     average = sum(numbers) / len(numbers)
-    print(
-        'Numbers:'
-        f'\n{numbers}'
-        f'\nAverage of the numbers: {average}'
-    )
+    print('Numbers:' f'\n{numbers}' f'\nAverage of the numbers: {average}')
 
 
 if __name__ == '__main__':

@@ -45,5 +45,4 @@ print(ret)
 
 # A função read() lê tod0 o conteúdo do arquivo, não somente a primeira linha.
 # Então quando printamos mais de uma vez, o conteúdo já foi lido e não há mais como o ler sem abrir novamente.
-
 """

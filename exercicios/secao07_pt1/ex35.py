@@ -8,15 +8,13 @@ que 10000) e:
 Dica: some as posições correspondentes. Se a soma ultrapassar 10, subtraia
 10 do resultado e some 1 à próxima posição.
 """
-from locale import setlocale, LC_ALL, atoi, format_string
+from locale import LC_ALL, atoi, format_string, setlocale
 
 
 def get_int(name: str) -> int:
     while True:
         try:
-            number = atoi(
-                input(f'Enter a number for "{name}":\n-> ')
-            )
+            number = atoi(input(f'Enter a number for "{name}":\n-> '))
             if number < 0 or number > 10000:
                 raise ValueError
             return number
@@ -26,26 +24,19 @@ def get_int(name: str) -> int:
 
 def main():
     setlocale(LC_ALL, 'pt_BR.UTF-8')
-    a = sorted(
-        list(map(int, str(get_int('a'))))
-    )
-    b = sorted(
-        list(map(int, str(get_int('b'))))
-    )
+    a = sorted(list(map(int, str(get_int('a')))))
+    b = sorted(list(map(int, str(get_int('b')))))
     v = tuple(x + y for x, y in zip(a, b))
     print(
-        '\nFirst array:'
-        f'\n->', ', '.join(
-            format_string('%d', x) for x in a
-        ) + '.'
+        '\nFirst array:' f'\n->',
+        ', '.join(format_string('%d', x) for x in a) + '.'
         '\nSecond array:'
-        f'\n->', ', '.join(
-            format_string('%d', x) for x in b
-        ) + '.'
+        f'\n->',
+        ', '.join(format_string('%d', x) for x in b) + '.'
         '\nSum of arrays:'
-        f'\n->', ', '.join(
-            format_string('%d', x) for x in v
-        ), end='.'
+        f'\n->',
+        ', '.join(format_string('%d', x) for x in v),
+        end='.',
     )
 
 

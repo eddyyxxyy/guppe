@@ -22,11 +22,12 @@ with open('novo.txt', 'w') as arquivo:
 
 with open('geek.txt', 'w') as arquivo:
     arquivo.write('Geek ' * 1000)
-
 """
 with open('frutas.txt', 'w') as arquivo:
     while True:
-        fruta: str = input('Informe uma fruta ou digite sair: ').strip().title()
+        fruta: str = (
+            input('Informe uma fruta ou digite sair: ').strip().title()
+        )
         if fruta != 'Sair':
             arquivo.write(fruta + '\n')
         else:

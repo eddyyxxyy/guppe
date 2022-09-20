@@ -7,7 +7,7 @@ que o código é inválido
 """
 from collections import deque
 from collections.abc import Iterator
-from locale import setlocale, LC_ALL, atof, format_string, atoi
+from locale import LC_ALL, atof, atoi, format_string, setlocale
 
 
 def get_values(n: int) -> Iterator[float]:
@@ -19,9 +19,7 @@ def get_values(n: int) -> Iterator[float]:
     for i in range(n):
         while True:
             try:
-                number = atof(
-                    input(f'Enter {i + 1}º number:\n-> ')
-                )
+                number = atof(input(f'Enter {i + 1}º number:\n-> '))
                 yield number
                 break
             except ValueError:
@@ -50,26 +48,18 @@ def get_code():
 def main():
     setlocale(LC_ALL, 'pt_BR.UTF-8')
     numbers = deque(get_values(5))
-    formatted_numbers = ', '.join(
-        format_string('%d', x) for x in numbers
-    )
+    formatted_numbers = ', '.join(format_string('%d', x) for x in numbers)
     code = get_code()
     if code == 0:
         exit('\nShutting down!')
     if code == 1:
-        print(
-            '\nNumbers:'
-            f'\n-> {formatted_numbers}.'
-        )
+        print('\nNumbers:' f'\n-> {formatted_numbers}.')
     if code == 2:
         numbers.reverse()
         formatted_numbers_reverse = ', '.join(
             format_string('%d', x) for x in numbers
         )
-        print(
-            '\nReversed Numbers:'
-            f'\n-> {formatted_numbers_reverse}.'
-        )
+        print('\nReversed Numbers:' f'\n-> {formatted_numbers_reverse}.')
 
 
 if __name__ == '__main__':

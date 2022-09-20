@@ -11,10 +11,7 @@ num2 = 0
 selected_option = 0
 print('-=' * 15 + '\n' + 'MENU'.center(30, '-') + '\n' + '=-' * 15)
 print('Informe a função desejada:'.center(30))
-print('1 - Soma;\n'
-      '2 - Subtração;\n'
-      '3 - Multiplicação;\n'
-      '4 - Divisão.')
+print('1 - Soma;\n' '2 - Subtração;\n' '3 - Multiplicação;\n' '4 - Divisão.')
 while True:
     try:
         selected_option = round(float(input('-> ').strip().replace(',', '.')))
@@ -29,14 +26,22 @@ while True:
         else:
             while True:
                 try:
-                    num1 = float(input('Informe o primeiro número: ').strip().replace(',', '.'))
+                    num1 = float(
+                        input('Informe o primeiro número: ')
+                        .strip()
+                        .replace(',', '.')
+                    )
                 except ValueError:
                     print('Valor inválido!')
                     continue
                 else:
                     while True:
                         try:
-                            num2 = float(input('Informe o segundo número: ').strip().replace(',', '.'))
+                            num2 = float(
+                                input('Informe o segundo número: ')
+                                .strip()
+                                .replace(',', '.')
+                            )
                         except ValueError:
                             print('Valor inválido!')
                             continue

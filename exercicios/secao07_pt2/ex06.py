@@ -2,7 +2,7 @@
 6) Leia duas matrizes 4 x 4 e escreva uma terceira com os maiores
 valores de cada posição das matrizes lidas.
 """
-from locale import setlocale, LC_ALL, atoi
+from locale import LC_ALL, atoi, setlocale
 
 
 def get_int_array(rows: int, columns: int, name: str) -> list:

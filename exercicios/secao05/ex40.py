@@ -13,17 +13,21 @@ from ex36_functions import real_br_money_mask
 cf: float = 0  # Custo de fábrica
 
 print(
-    '=' * 30 + '\n' +
-    'PRECIFICADOR DE VEÍCULOS'.center(30, '-') + '\n' +
-    '=' * 30 + '\n'
+    '=' * 30
+    + '\n'
+    + 'PRECIFICADOR DE VEÍCULOS'.center(30, '-')
+    + '\n'
+    + '=' * 30
+    + '\n'
 )
 
 while True:
     try:
-        cf = float(input(
-            'Custo de fábrica: \n'
-            '\033[37m-> R$\033[m'
-        ).strip().replace(',', '.'))
+        cf = float(
+            input('Custo de fábrica: \n' '\033[37m-> R$\033[m')
+            .strip()
+            .replace(',', '.')
+        )
     except ValueError:
         print('\nCusto de fabricação inválido! Tente novamente...\n')
         continue

@@ -3,7 +3,7 @@
 do maior valor.
 """
 from collections import deque
-from locale import setlocale, LC_ALL, atof
+from locale import LC_ALL, atof, setlocale
 
 
 def get_float_array(rows, columns) -> deque[deque]:
@@ -21,9 +21,7 @@ def get_float_array(rows, columns) -> deque[deque]:
         for i in range(0, columns):
             while True:
                 try:
-                    value = atof(
-                        input(f'Enter no. for [{c},{i}]:\n-> ')
-                    )
+                    value = atof(input(f'Enter no. for [{c},{i}]:\n-> '))
                     break
                 except ValueError:
                     print('\033[31mINVALID! Try again!\033[m')

@@ -3,7 +3,7 @@
 Imprima o vetor, o maior elemento e a posição que ele se encontra.
 """
 from collections.abc import Iterator
-from locale import atoi, setlocale, LC_ALL, format_string
+from locale import LC_ALL, atoi, format_string, setlocale
 
 
 def get_ints(n: int) -> Iterator[int]:
@@ -27,18 +27,16 @@ def get_ints(n: int) -> Iterator[int]:
 def main():
     setlocale(LC_ALL, 'pt-BR')
     numbers = tuple(get_ints(10))
-    formatted_numbers = ', '.join(
-        format_string('%d', x) for x in numbers
-    )
+    formatted_numbers = ', '.join(format_string('%d', x) for x in numbers)
     print(
-        '-' * 30 +
-        '\nNumbers:'
+        '-' * 30 + '\nNumbers:'
         f'\n-> {formatted_numbers}.'
         '\nLargest number:'
         f'\n-> {max(numbers):n}.'
         '\nIndex of largest number:'
         f'\n-> {numbers.index(max(numbers))}'
     )
+
 
 if __name__ == '__main__':
     main()

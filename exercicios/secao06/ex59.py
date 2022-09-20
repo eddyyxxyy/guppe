@@ -5,8 +5,8 @@ mês e o código do consumidor (1-Residencial, 2-Comercial, 3-industrial). No fi
 o maior, o menor e a média do consumo dos habitantes: e por fim o total do consumo de
 cada categoria de consumidor.
 """
-from locale import atof, LC_ALL, setlocale, currency
 from collections import deque
+from locale import LC_ALL, atof, currency, setlocale
 
 
 def get_number(msg: str, limit: float = 0) -> float:
@@ -40,8 +40,7 @@ def main() -> None:
     commercial = deque()
     industrial = deque()
     print(
-        '-' * 50 + '\n' +
-        'Inhabitant codes:'
+        '-' * 50 + '\n' + 'Inhabitant codes:'
         '\n1 - Residential'
         '\n2 - Commercial'
         '\n3 - Industrial\n'
@@ -50,8 +49,12 @@ def main() -> None:
         # Appends a tuple with monthly consumption and the inhabitant code
         people.append(
             (
-                get_number(f'Enter {person:n}º inhabitant Kw/h last month consumption:\n-> '),
-                get_number(f'Enter {person:n}º inhabitant code:\n-> ', limit=3)
+                get_number(
+                    f'Enter {person:n}º inhabitant Kw/h last month consumption:\n-> '
+                ),
+                get_number(
+                    f'Enter {person:n}º inhabitant code:\n-> ', limit=3
+                ),
             )
         )
     for data in people:

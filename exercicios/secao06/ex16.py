@@ -9,15 +9,17 @@ from locale import atoi, format_string
 def get_bool(msg: str) -> bool:
     while True:
         try:
-            return {"d": True, "a": False}[input(msg).strip().lower()[0]]
+            return {'d': True, 'a': False}[input(msg).strip().lower()[0]]
         except KeyError:
-            print("Invalid input! Please enter Descending or Ascending!")
+            print('Invalid input! Please enter Descending or Ascending!')
 
 
 def get_posit_odd_integer() -> int:
     while True:
         try:
-            posit_odd_integer: int = atoi(input('Enter a positive odd number:\n-> ').strip())
+            posit_odd_integer: int = atoi(
+                input('Enter a positive odd number:\n-> ').strip()
+            )
             if posit_odd_integer % 2 == 0:
                 print('Number must be odd! Try again...')
                 continue
@@ -37,22 +39,16 @@ def odd_till_n(invert: bool = False) -> Iterator[int]:
 
 
 def main():
-    invert = get_bool('Ascending or Descending order? \033[37mA or D\033[m\n-> ')
-    numbers = tuple(odd_till_n(invert))
-    formatted_numbers = ', '.join(
-        format_string("%d", x) for x in numbers
+    invert = get_bool(
+        'Ascending or Descending order? \033[37mA or D\033[m\n-> '
     )
+    numbers = tuple(odd_till_n(invert))
+    formatted_numbers = ', '.join(format_string('%d', x) for x in numbers)
     print('Numbers in ', end='')
     if invert:
-        print(
-            'ascending order:'
-            f'\n-> {formatted_numbers}'
-        )
+        print('ascending order:' f'\n-> {formatted_numbers}')
     else:
-        print(
-            'descending order:'
-            f'\n-> {formatted_numbers}'
-        )
+        print('descending order:' f'\n-> {formatted_numbers}')
 
 
 if __name__ == '__main__':

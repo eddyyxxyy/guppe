@@ -8,7 +8,7 @@ OBS: Não conte espaços ou hífens
 # Foi instalado o pacote num2words para reduzir o código e fazê-lo funcionar
 com maior facilidade.
 """
-from locale import setlocale, LC_ALL, format_string
+from locale import LC_ALL, format_string, setlocale
 
 from num2words import num2words
 
@@ -16,7 +16,9 @@ from num2words import num2words
 def count_number_letters():
     result = 0
     for i in range(1, 1001):
-        result += (len(''.join(''.join(num2words(i, lang='pt_BR').split('-')).split(' '))))
+        result += len(
+            ''.join(''.join(num2words(i, lang='pt_BR').split('-')).split(' '))
+        )
     return result
 
 

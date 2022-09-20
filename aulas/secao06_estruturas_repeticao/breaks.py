@@ -21,5 +21,4 @@ while True:
     comando = str(input('Digite "sair" para sair: ')
     if comando == 'sair':
         break
-
 """

@@ -3,7 +3,7 @@
 Em sequida deverá ser impresso o maior e o menor elemento do vetor.
 """
 from collections.abc import Iterator
-from locale import format_string, setlocale, LC_ALL
+from locale import LC_ALL, format_string, setlocale
 
 
 def float_iterator(n: int, msg: str) -> Iterator[float]:
@@ -24,8 +24,7 @@ def main():
         format_string('%.1f', number) for number in numbers
     )
     print(
-        '-' * 30 +
-        '\nNumbers:'
+        '-' * 30 + '\nNumbers:'
         f'\n-> {formatted_numbers}.'
         '\nLargest number:'
         f'\n-> {max(numbers):n}'

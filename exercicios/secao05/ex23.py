@@ -8,8 +8,10 @@ from datetime import date
 a = 0
 while a != -1:
     try:
-        print('\n\033[37mDigite -1 para sair ou coloque'
-              ' 0 para analisar o ano atual...\033[m\n')
+        print(
+            '\n\033[37mDigite -1 para sair ou coloque'
+            ' 0 para analisar o ano atual...\033[m\n'
+        )
         a = int(input('Informe um ano para saber se é bissexto: ').strip())
     except ValueError:
         print('Valor inválido!')

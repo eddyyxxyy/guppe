@@ -5,7 +5,7 @@ calculando C = A - B. Mostre na tela os dados do vetor C
 """
 from collections import deque
 from collections.abc import Iterator
-from locale import atoi, setlocale, LC_ALL, format_string
+from locale import LC_ALL, atoi, format_string, setlocale
 
 
 def get_array(n: int, name: str) -> Iterator[int]:
@@ -29,15 +29,9 @@ def main() -> None:
     c = deque()
     for i in range(10):
         c.append(a[i] - b[i])
-    formatted_a = ', '.join(
-        format_string('%d', x) for x in a
-    )
-    formatted_b = ', '.join(
-        format_string('%d', x) for x in b
-    )
-    formatted_c = ', '.join(
-        format_string('%d', x) for x in c
-    )
+    formatted_a = ', '.join(format_string('%d', x) for x in a)
+    formatted_b = ', '.join(format_string('%d', x) for x in b)
+    formatted_c = ', '.join(format_string('%d', x) for x in c)
     print(
         '\nArrays:'
         f'\nA -> {formatted_a}.'

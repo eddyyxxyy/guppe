@@ -47,7 +47,6 @@ autores = ['Isaac Asimov', 'Ray Bradbury', 'Robert Heinlein', 'Arthur C. Clarke'
 print(autores)
 autores.sort(key=lambda sobrenome: sobrenome.split(' ')[-1].lower())
 print(autores)
-
 """
 
 # Função quadrática:
@@ -58,7 +57,7 @@ print(autores)
 
 def geradora_funcao_quadratica(a, b, c):
     """Retorna a função f(x) = a * x ** 2 + b * x + c"""
-    return lambda x: a * x ** 2 + b * x + c
+    return lambda x: a * x**2 + b * x + c
 
 
 teste = geradora_funcao_quadratica(2, 3, -5)

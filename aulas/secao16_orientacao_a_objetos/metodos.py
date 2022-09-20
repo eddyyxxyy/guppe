@@ -147,5 +147,4 @@ user.conta_usuarios()  # Possível, mas incorreta
 
 # Métodos de Classe, em Python, são conhecidos como Métodos Estáticos em
 # outras linguagens.
-
 """

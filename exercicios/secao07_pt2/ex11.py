@@ -8,9 +8,9 @@ if linha == coluna:  # Diagonal principal
 
 if linha > coluna:  # Abaixo da diagonal principal
 """
-from locale import setlocale, LC_ALL
+from locale import LC_ALL, setlocale
 
-from numpy import asarray, trace, diagonal, fliplr
+from numpy import asarray, diagonal, fliplr, trace
 
 from exercicios.secao07_pt2.ex08 import get_int_array
 

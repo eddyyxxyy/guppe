@@ -33,13 +33,8 @@ def prime_numbers(number: int) -> int:
 
 
 def main() -> None:
-    number = get_positive_int(
-        'Enter an positive integer:\n-> '
-    )
-    print(
-        f'Sum of {number} prime numbers:',
-        prime_numbers(number)
-    )
+    number = get_positive_int('Enter an positive integer:\n-> ')
+    print(f'Sum of {number} prime numbers:', prime_numbers(number))
 
 
 if __name__ == '__main__':

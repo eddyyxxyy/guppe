@@ -3,8 +3,8 @@
 múltiplos de 3, considerando números maiores que 0
 """
 
-from locale import format_string, atoi
 from collections.abc import Iterator
+from locale import atoi, format_string
 
 
 def get_multiples_of_three(n: int) -> Iterator[int]:
@@ -20,9 +20,12 @@ def get_multiples_of_three(n: int) -> Iterator[int]:
 
 def main() -> None:
     print(
-        '=' * 20 + '\n' +
-        'MULTIPLOS DE 3'.center(20, '-') + '\n' +
-        '=' * 20 + '\n'
+        '=' * 20
+        + '\n'
+        + 'MULTIPLOS DE 3'.center(20, '-')
+        + '\n'
+        + '=' * 20
+        + '\n'
     )
     while True:
         try:
@@ -31,13 +34,8 @@ def main() -> None:
         except ValueError:
             print('Entrada inválida! Tente novamente...')
     numbers = tuple(get_multiples_of_three(multiples))
-    formatted_numbers = ", ".join(
-        format_string("%d", x) for x in numbers
-    )
-    print(
-        '\nValores:'
-        f'\n{formatted_numbers}'
-    )
+    formatted_numbers = ', '.join(format_string('%d', x) for x in numbers)
+    print('\nValores:' f'\n{formatted_numbers}')
 
 
 if __name__ == '__main__':

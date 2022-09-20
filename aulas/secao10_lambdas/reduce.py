@@ -36,7 +36,6 @@ reduce() irá retornar o resultado final.
 Alternativamente, poderíamos ver a função reduce() como:
 
 (funcaon(...(funcao(funcao(funcao(a1, a2), a3), a4), ...), an)
-
 """
 
 # Como funciona na prática:

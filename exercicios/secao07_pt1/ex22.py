@@ -4,7 +4,7 @@ outro vetor contendo, nas posições pares os valores do primeiro
 e nas posições impares os valores do segundo.
 """
 from collections import deque
-from locale import setlocale, LC_ALL, format_string
+from locale import LC_ALL, format_string, setlocale
 
 from exercicios.secao07_pt1.ex21 import get_array
 
@@ -18,15 +18,9 @@ def main():
     for i in range(10):
         c.append(a[i])
         c.append(b[i])
-    formatted_a = ', '.join(
-        format_string('%d', x) for x in a
-    )
-    formatted_b = ', '.join(
-        format_string('%d', x) for x in b
-    )
-    formatted_c = ', '.join(
-        format_string('%d', x) for x in c
-    )
+    formatted_a = ', '.join(format_string('%d', x) for x in a)
+    formatted_b = ', '.join(format_string('%d', x) for x in b)
+    formatted_c = ', '.join(format_string('%d', x) for x in c)
     print(
         '\nArrays:'
         f'\nA -> {formatted_a}.'

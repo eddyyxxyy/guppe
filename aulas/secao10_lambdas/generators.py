@@ -97,5 +97,4 @@ print(type(gen))
 
 for num in gen:
     print(num)
-
 """

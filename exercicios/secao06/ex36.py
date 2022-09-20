@@ -14,13 +14,13 @@ def square_of_sums() -> int:
     sum_of: int = 0
     for number in range(1, 11):
         sum_of += number
-    return sum_of ** 2
+    return sum_of**2
 
 
 def sum_of_squares() -> int:
     sum_of: int = 0
     for number in range(1, 11):
-        sum_of += number ** 2
+        sum_of += number**2
     return sum_of
 
 

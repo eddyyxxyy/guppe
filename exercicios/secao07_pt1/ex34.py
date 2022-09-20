@@ -8,7 +8,7 @@ ser pesquisado no vetor, verificando se ele existe entre os números que
 já foram fornecidos. Exibir na tela o vetor final que foi digitado.
 """
 from collections.abc import Iterator
-from locale import setlocale, LC_ALL, atof, format_string
+from locale import LC_ALL, atof, format_string, setlocale
 
 
 def get_non_repeated_numbers(n: int) -> Iterator[float]:
@@ -21,9 +21,7 @@ def get_non_repeated_numbers(n: int) -> Iterator[float]:
     for i in range(n):
         while True:
             try:
-                number = atof(
-                    input(f'Enter the {i + 1}º number:\n-> ')
-                )
+                number = atof(input(f'Enter the {i + 1}º number:\n-> '))
                 if number in numbers:
                     raise ValueError
                 numbers.add(number)
@@ -37,10 +35,9 @@ def main():
     setlocale(LC_ALL, 'pt_BR.UTF-8')
     v = tuple(sorted(get_non_repeated_numbers(10)))
     print(
-        '\nArray V values:'
-        '\n->', ', '.join(
-            format_string("%.1f", x) for x in v
-        ), end='.'
+        '\nArray V values:' '\n->',
+        ', '.join(format_string('%.1f', x) for x in v),
+        end='.',
     )
 
 

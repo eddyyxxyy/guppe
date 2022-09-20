@@ -22,7 +22,11 @@ def get_number(msg: str = 'Enter a number:\n-> ') -> int:
 def another_game() -> str:
     while True:
         try:
-            another_one = str(input('\n\033[90mPC\033[m: Want to try again?\n-> ').strip().lower()[0])
+            another_one = str(
+                input('\n\033[90mPC\033[m: Want to try again?\n-> ')
+                .strip()
+                .lower()[0]
+            )
             if another_one not in 'yn':
                 raise KeyError
             return another_one
@@ -35,9 +39,10 @@ def main() -> None:
         pc_number = randint(1, 1000)
         while True:
             print(
-                f"\033[90mPC\033[m: "
+                f'\033[90mPC\033[m: '
                 f"I'm thinking in a number, between 1 and 1000. Try to guess..."
-                f"\n-> ", end=''
+                f'\n-> ',
+                end='',
             )
             player_number = get_number('')
             if player_number != pc_number:

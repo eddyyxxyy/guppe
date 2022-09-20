@@ -12,16 +12,13 @@ def find_pitagorian_terms_of_1000():
     for a in range(500):
         for b in range(a + 1, 500):
             c = 1000 - (a + b)
-            if a ** 2 + b ** 2 == c ** 2:
+            if a**2 + b**2 == c**2:
                 return a, b, c
 
 
 def main():
     numbers = find_pitagorian_terms_of_1000()
-    print(
-        'Pythagorean triplet terms that add up to 1000:'
-        f'\n-> {numbers}'
-    )
+    print('Pythagorean triplet terms that add up to 1000:' f'\n-> {numbers}')
 
 
 if __name__ == '__main__':

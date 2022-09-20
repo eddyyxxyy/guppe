@@ -3,7 +3,7 @@
 a matriz gerada numa matriz triangular inferior, ou seja, atribuindo zero a todos os
 elementos acima da diagonal principal. Imprima a matriz original e a matriz transformada.
 """
-from locale import atof, setlocale, LC_ALL
+from locale import LC_ALL, atof, setlocale
 
 from numpy import asarray, tril
 
@@ -15,9 +15,7 @@ def get_float_array(rows: int, columns: int) -> list[list]:
         for j in range(columns):
             while True:
                 try:
-                    value = atof(
-                        input(f'Enter no. for [{i},{j}]:\n-> ')
-                    )
+                    value = atof(input(f'Enter no. for [{i},{j}]:\n-> '))
                     if value < 1 or value > 20:
                         raise ValueError
                     break
@@ -34,7 +32,7 @@ def main() -> None:
     array = asarray(array)
     print(
         '\nArray:\n' + str(array),
-        '\n\nLower triangle matrix of Array:\n' + str(tril(array))
+        '\n\nLower triangle matrix of Array:\n' + str(tril(array)),
     )
 
 

@@ -3,7 +3,7 @@
 ou 17 após um número dado.
 """
 from collections.abc import Iterator
-from locale import atoi, setlocale, LC_ALL
+from locale import LC_ALL, atoi, setlocale
 
 
 def get_number(msg: str = 'Enter a number:\n-> ') -> int:

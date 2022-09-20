@@ -37,7 +37,6 @@ for lista in listas:
 # Com List Comprehension:
 
 [[print(valor, end=' ') for valor in lista] for lista in listas]
-
 """
 
 # Outros Exemplos
@@ -49,7 +48,10 @@ print(tabuleiro)
 
 # Gerando jogadas para o jogo da velha:
 
-velha = [['X' if numero % 2 == 0 else 'O' for numero in range(1, 4)] for valor in range(1, 4)]
+velha = [
+    ['X' if numero % 2 == 0 else 'O' for numero in range(1, 4)]
+    for valor in range(1, 4)
+]
 print(velha)
 
 # Gerando valores iniciais:

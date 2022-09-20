@@ -26,15 +26,16 @@ min_total: int
 
 
 print(
-    '=' * 44 + '\n' +
-    'ESTACIONAMENTO'.center(44, '-') + '\n' +
-    '=' * 44 + '\n'
+    '=' * 44 + '\n' + 'ESTACIONAMENTO'.center(44, '-') + '\n' + '=' * 44 + '\n'
 )
 while True:
     try:
         hora_chegada, min_chegada = [
-            int(x) for x in input('Digite a hora e minuto de chegada: \033[37mEx: 12 50\033[m\n'
-                                  '->  ').split()
+            int(x)
+            for x in input(
+                'Digite a hora e minuto de chegada: \033[37mEx: 12 50\033[m\n'
+                '->  '
+            ).split()
         ]
     except ValueError:
         print('\nValor inválido! Tente novamente...\n')
@@ -42,8 +43,11 @@ while True:
         while True:
             try:
                 hora_partida, min_partida = [
-                    int(x) for x in input('Digite a hora e minuto de saída: \033[37mEx: 14 30\033[m\n'
-                                          '->  ').split()
+                    int(x)
+                    for x in input(
+                        'Digite a hora e minuto de saída: \033[37mEx: 14 30\033[m\n'
+                        '->  '
+                    ).split()
                 ]
             except ValueError:
                 print('\nValor inválido! Tente novamente...\n')
@@ -62,7 +66,9 @@ hora_final = hora_partida - hora_chegada
 
 if hora_final >= 1:
     if min_final > 1:
-        print(f'O carro ficou estacionado durante {hora_final} horas e {min_final} minutos.')
+        print(
+            f'O carro ficou estacionado durante {hora_final} horas e {min_final} minutos.'
+        )
     else:
         print(f'O carro ficou estacionado durante {hora_final} horas.')
 else:

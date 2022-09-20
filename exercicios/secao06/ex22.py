@@ -10,7 +10,9 @@ from collections.abc import Iterator
 from locale import atof
 
 
-def get_grades(msg: str = 'Enter your grade (from 10 to 20):\n-> ') -> Iterator[float]:
+def get_grades(
+    msg: str = 'Enter your grade (from 10 to 20):\n-> ',
+) -> Iterator[float]:
     while True:
         try:
             grade = atof(input(msg).strip())
@@ -28,10 +30,7 @@ def arithmetic_average() -> float:
 
 def main() -> None:
     arithmetic_result = arithmetic_average()
-    print(
-        '\nArithmetic Average:'
-        f'\n-> {arithmetic_result:.2f}'
-    )
+    print('\nArithmetic Average:' f'\n-> {arithmetic_result:.2f}')
 
 
 if __name__ == '__main__':

@@ -4,18 +4,16 @@ o dia da semana correspondente a este número. Isto é, domingo se 1, segunda-fe
 e assim por diante.
 """
 print('-' * 30 + '\n' + 'Dias da Semana'.center(30, '-') + '\n' + '-' * 30)
-dias = (
-    'domingo',
-    'segunda',
-    'terça',
-    'quarta',
-    'quinta',
-    'sexta',
-    'sabado'
-)
+dias = ('domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sabado')
 while True:
     try:
-        ds = round(float(input('Informe um número entre 1 e 7: ').strip().replace(',', '.')))
+        ds = round(
+            float(
+                input('Informe um número entre 1 e 7: ')
+                .strip()
+                .replace(',', '.')
+            )
+        )
     except ValueError:
         print(f'Valor inválido!')
     else:

@@ -5,16 +5,14 @@ e mostre-os na tela.
 """
 from collections import deque
 from collections.abc import Iterator
-from locale import setlocale, LC_ALL, atof, atoi, format_string
+from locale import LC_ALL, atof, atoi, format_string, setlocale
 
 
 def get_floats(n: int) -> Iterator[float]:
     for i in range(n):
         while True:
             try:
-                number = atof(
-                    input(f'Enter {i + 1}º number:\n-> ')
-                )
+                number = atof(input(f'Enter {i + 1}º number:\n-> '))
                 yield number
                 break
             except ValueError:
@@ -24,9 +22,7 @@ def get_floats(n: int) -> Iterator[float]:
 def get_int():
     while True:
         try:
-            number = atoi(
-                input('Enter an integer:\n-> ')
-            )
+            number = atoi(input('Enter an integer:\n-> '))
             return number
         except ValueError:
             print('Invalid number! Try again...\n')
@@ -43,10 +39,7 @@ def main():
     formatted_multiples = ', '.join(
         format_string('%.1f', x) for x in multiples
     )
-    print(
-        '\nMultiples:'
-        f'\n-> {formatted_multiples}.'
-    )
+    print('\nMultiples:' f'\n-> {formatted_multiples}.')
 
 
 if __name__ == '__main__':

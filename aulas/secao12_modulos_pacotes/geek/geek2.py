@@ -1,4 +1,3 @@
-
 curso = 'Programação em Python Essencial'
 
 

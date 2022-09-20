@@ -12,7 +12,7 @@ vetores resultantes em cada caso abaixo:
     que não estão em x.
 """
 from collections import deque
-from locale import setlocale, LC_ALL, atoi, format_string
+from locale import LC_ALL, atoi, format_string, setlocale
 from operator import add, mul
 
 
@@ -36,34 +36,23 @@ def main():
     print()
     y: deque = get_non_repeated_ints(5, 'y')
     print(
-        '\nx:'
-        '\n->', ', '.join(
-            format_string('%d', x) for x in x
-        ) +
-        '\ny:'
-        '\n->', ', '.join(
-            format_string('%d', x) for x in y
-        ) +
-        '\nSum between x and y:'
-        f'\n->', ', '.join(
-            format_string('%d', x) for x in map(add, x, y)
-        ) +
-        '\nMultiplication between x and y:'
-        f'\n->', ', '.join(
-            format_string('%d', x) for x in map(mul, x, y)
-        ) +
-        '\nDifference of x and y:'
-        f'\n->', ', '.join(
-            format_string('%d', x) for x in set(x).difference(y)
-        ) +
-        '\nIntersection of x and y:'
-        f'\n->', ', '.join(
-            format_string('%d', x) for x in set(x).intersection(y)
-        ) +
-        '\nUnion of x and y:'
-        f'\n->', ', '.join(
-            format_string('%d', x) for x in set(x).union(y)
-        )
+        '\nx:' '\n->',
+        ', '.join(format_string('%d', x) for x in x) + '\ny:' '\n->',
+        ', '.join(format_string('%d', x) for x in y) + '\nSum between x and y:'
+        f'\n->',
+        ', '.join(format_string('%d', x) for x in map(add, x, y))
+        + '\nMultiplication between x and y:'
+        f'\n->',
+        ', '.join(format_string('%d', x) for x in map(mul, x, y))
+        + '\nDifference of x and y:'
+        f'\n->',
+        ', '.join(format_string('%d', x) for x in set(x).difference(y))
+        + '\nIntersection of x and y:'
+        f'\n->',
+        ', '.join(format_string('%d', x) for x in set(x).intersection(y))
+        + '\nUnion of x and y:'
+        f'\n->',
+        ', '.join(format_string('%d', x) for x in set(x).union(y)),
     )
 
 

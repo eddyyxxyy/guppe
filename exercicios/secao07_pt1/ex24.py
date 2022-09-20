@@ -5,7 +5,7 @@ em metros. Encontre o aluno mais baixo e o mais alto. Mostre o número do
 aluno mais baixo e do mais alto, juntamente com suas alturas.
 """
 from collections.abc import Iterator
-from locale import setlocale, LC_ALL, atoi, atof
+from locale import LC_ALL, atof, atoi, setlocale
 
 
 def get_student(n: int) -> Iterator[dict]:

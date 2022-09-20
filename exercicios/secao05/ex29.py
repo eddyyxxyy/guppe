@@ -6,8 +6,8 @@ onde a e b são os números aleatórios. Peça a resposta. Faça cinco
 perguntas ao aluno, e mostre para ele as perguntas e as respostas
 corretas, além de quantas vezes o aluno acertou
 """
-from random import randint
 from collections import deque
+from random import randint
 
 a: int
 b: int
@@ -15,12 +15,16 @@ acertos: int = 0
 answer: int = 0
 answers: deque = deque()
 results: deque = deque()
-print('-=' * 15 + '\n' + 'APRENDENDO A SOMAR'.center(30, '-') + '\n' + '=-' * 15)
+print(
+    '-=' * 15 + '\n' + 'APRENDENDO A SOMAR'.center(30, '-') + '\n' + '=-' * 15
+)
 while len(answers) < 5:
     a = randint(1, 100)
     b = randint(1, 100)
     try:
-        answer = int(input(f'{len(answers) + 1} - Quanto é {a} + {b}?\n').strip())
+        answer = int(
+            input(f'{len(answers) + 1} - Quanto é {a} + {b}?\n').strip()
+        )
     except ValueError:
         print(f'{answer} é inválido, tente novamente...\n')
         continue
@@ -37,4 +41,7 @@ for i in range(5):
 print('-' * 30 + '\n' + f'Você acertou {acertos} questões!'.center(30))
 print('-' * 30 + '\nGabarito:')
 for i in range(5):
-    print(f'Questão {i + 1} - {results[i]}'.ljust(17) + f'|  Sua resposta: {answers[i]}')
+    print(
+        f'Questão {i + 1} - {results[i]}'.ljust(17)
+        + f'|  Sua resposta: {answers[i]}'
+    )

@@ -8,9 +8,12 @@ assim, permitindo que as entradas de dados sejam já feitas da forma mais
 correta possível!
 """
 print(
-    '=' * 30 + '\n' +
-    'VALIDAÇÃO DE DATA'.center(30, '-') + '\n'
-    + '=' * 30 + '\n'
+    '=' * 30
+    + '\n'
+    + 'VALIDAÇÃO DE DATA'.center(30, '-')
+    + '\n'
+    + '=' * 30
+    + '\n'
 )
 
 dia: int = 0
@@ -57,21 +60,26 @@ while True:
 valida = False
 
 # Meses com 31 dias
-if mes == 1 or mes == 3 or mes == 5 or \
-        mes == 7 or mes == 8 or mes == 10 or mes == 12:
+if (
+    mes == 1
+    or mes == 3
+    or mes == 5
+    or mes == 7
+    or mes == 8
+    or mes == 10
+    or mes == 12
+):
     if dia <= 31:
         valida = True
 
 # Meses com 30 dias
-elif mes == 4 or mes == 6 or \
-        mes == 9 or mes == 11:
+elif mes == 4 or mes == 6 or mes == 9 or mes == 11:
     if dia <= 30:
         valida = True
 elif mes == 2:
 
     # Testa se é bissexto
-    if (ano % 4 == 0 and ano % 100 != 0) or \
-            (ano % 400 == 0):
+    if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
         if dia <= 29:
             valida = True
     elif dia <= 28:

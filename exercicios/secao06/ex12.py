@@ -37,13 +37,8 @@ def main():
         except ValueError:
             print('Invalid input! Try again...')
     numbers = tuple(n_natural_numbers(times, bool(inverse)))
-    formatted_numbers = ", ".join(
-        format_string("%d", x) for x in numbers
-    )
-    print(
-        '\nNumbers:'
-        f'\n-> {formatted_numbers}'
-    )
+    formatted_numbers = ', '.join(format_string('%d', x) for x in numbers)
+    print('\nNumbers:' f'\n-> {formatted_numbers}')
 
 
 if __name__ == '__main__':

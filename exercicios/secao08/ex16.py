@@ -3,7 +3,7 @@
 na tela usando vários símbolos de igual (Ex: ========). A função recebe
 por parâmetro quantos sinais de igual serão mostrados
 """
-from locale import setlocale, LC_ALL
+from locale import LC_ALL, setlocale
 
 
 def desenha_linha(times: int) -> str:

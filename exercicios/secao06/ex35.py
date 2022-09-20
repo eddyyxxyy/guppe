@@ -38,10 +38,7 @@ def sum_odds_inrange() -> int:
 def main():
     print('Sum of odd numbers in range of n to n\n')
     sum_of_odds = sum_odds_inrange()
-    print(
-        '\nSum:'
-        f'\n-> {sum_of_odds}'
-    )
+    print('\nSum:' f'\n-> {sum_of_odds}')
 
 
 if __name__ == '__main__':

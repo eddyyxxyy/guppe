@@ -21,7 +21,9 @@ if __name__ == '__main__':
     print('Calculando as raízes de uma equação de 2º grau\n')
     while True:
         try:
-            a = float(input('Entre com o valor de a: ').strip().replace(',', '.'))
+            a = float(
+                input('Entre com o valor de a: ').strip().replace(',', '.')
+            )
         except ValueError:
             print('Valor inválido!')
             continue
@@ -31,14 +33,22 @@ if __name__ == '__main__':
                 break
             while True:
                 try:
-                    b = float(input('Entre com o valor de b: ').strip().replace(',', '.'))
+                    b = float(
+                        input('Entre com o valor de b: ')
+                        .strip()
+                        .replace(',', '.')
+                    )
                 except ValueError:
                     print('Valor inválido!')
                     continue
                 else:
                     while True:
                         try:
-                            c = float(input('Entre com o valor de c: ').strip().replace(',', '.'))
+                            c = float(
+                                input('Entre com o valor de c: ')
+                                .strip()
+                                .replace(',', '.')
+                            )
                         except ValueError:
                             print('Valor inválido!')
                             continue

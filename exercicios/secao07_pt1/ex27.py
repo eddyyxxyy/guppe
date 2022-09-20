@@ -4,7 +4,7 @@ elementos que são primos e suas respectivas posições no vetor.
 """
 from collections import deque
 from collections.abc import Iterable, Iterator
-from locale import setlocale, LC_ALL, format_string
+from locale import LC_ALL, format_string, setlocale
 
 from exercicios.secao07_pt1.ex07 import get_ints
 
@@ -21,17 +21,10 @@ def extract_prime_numbers(n: Iterable) -> Iterator:
 
 def main():
     setlocale(LC_ALL, 'pt_BR.UTF-8')
-    primes = deque(
-        extract_prime_numbers(get_ints(10))
-    )
+    primes = deque(extract_prime_numbers(get_ints(10)))
     if len(primes):
-        formatted_primes = ', '.join(
-            format_string('%d', x) for x in primes
-        )
-        print(
-            '\nPrime numbers:'
-            f'\n-> {formatted_primes}.'
-        )
+        formatted_primes = ', '.join(format_string('%d', x) for x in primes)
+        print('\nPrime numbers:' f'\n-> {formatted_primes}.')
     else:
         print('\nThere was no prime number entered.')
 

@@ -42,5 +42,4 @@ with open('outro.txt', 'a+') as arq:
     arq.write('Novo topo!\n')
     arq.write('Nova linha.\n')
     arq.write('Mais uma linha.\n')
-
 """

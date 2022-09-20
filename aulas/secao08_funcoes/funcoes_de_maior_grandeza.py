@@ -105,5 +105,4 @@ rindo = faz_me_rir_novamente('Fernanda')
 print(rindo())
 print(rindo())
 print(rindo())
-
 """

@@ -7,7 +7,7 @@ de acordo com a tabela abaixo:
     | entre      | 8 e 12  | Econômico
     | maior que  |  12     | Super econômico!
 """
-from locale import setlocale, LC_ALL
+from locale import LC_ALL, setlocale
 
 from exercicios.secao08.ex09 import get_float
 

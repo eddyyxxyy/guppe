@@ -16,11 +16,17 @@ meses = (
     'Setembro',
     'Outubro',
     'Novembro',
-    'Dezembro'
+    'Dezembro',
 )
 while True:
     try:
-        ma = round(float(input('Informe um número entre 1 e 12: ').strip().replace(',', '.')))
+        ma = round(
+            float(
+                input('Informe um número entre 1 e 12: ')
+                .strip()
+                .replace(',', '.')
+            )
+        )
     except ValueError:
         print('Valor inválido!')
         continue

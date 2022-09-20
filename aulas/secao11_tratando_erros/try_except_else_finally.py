@@ -107,5 +107,4 @@ num1 = input('Informe o primeiro número: ')
 num2 = input('Informe o segundo número: ')
 
 print(div(num1, num2))
-
 """

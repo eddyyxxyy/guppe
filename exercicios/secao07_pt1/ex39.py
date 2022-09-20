@@ -8,7 +8,7 @@ imprima n linhas do chamado Triangulo de Pascal:
 1 4 6 4 1
 1 5 10 10 5 1
 """
-from locale import setlocale, LC_ALL
+from locale import LC_ALL, setlocale
 
 from exercicios.secao07_pt1.ex35 import get_int
 

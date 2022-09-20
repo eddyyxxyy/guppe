@@ -6,7 +6,7 @@ from collections.abc import Iterator
 from locale import atoi
 
 
-def get_positive_integer(msg: str = "Enter a integer value: ") -> int:
+def get_positive_integer(msg: str = 'Enter a integer value: ') -> int:
     while True:
         try:
             number: int = atoi(input(msg + '\n-> ').strip())
@@ -33,7 +33,9 @@ def main():
     print('All odd numbers till "n"')
     while True:
         try:
-            invert = atoi(input('\n(0)Descending or (1)Ascending order?\n-> ').strip())
+            invert = atoi(
+                input('\n(0)Descending or (1)Ascending order?\n-> ').strip()
+            )
             if invert != 1 and invert != 0:
                 print('Only type 0 or 1...\n')
                 continue

@@ -29,8 +29,6 @@ print(soma.__name__)  # logar
 print(soma.__doc__)  # 'Eu sou uma função (logar) dentro de outra.'
 
 # ESTÁ RETORNANDO A DOCUMENTAÇÃO DO DECORADOR E NÃO DA FUNÇÃO SOMA
-
-
 """
 
 # Resolução do problema
@@ -39,12 +37,15 @@ from functools import wraps
 
 
 def ver_log(funcao):
-    @wraps(funcao)  # Fazer o Wrap já resolve o problema, pois "amarra" a documentação somente à função em que está
+    @wraps(
+        funcao
+    )  # Fazer o Wrap já resolve o problema, pois "amarra" a documentação somente à função em que está
     def logar(*args, **kwargs):
         """Eu sou uma função (logar) dentro de outra"""
         print(f'Você está chamdando {funcao.__name__}')
         print(f'Aqui a documentação: {funcao.__doc__}')
         return funcao(*args, **kwargs)
+
     return logar
 
 

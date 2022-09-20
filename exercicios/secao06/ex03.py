@@ -3,8 +3,8 @@
 regressiva na tela, inciando em 10 e terminando em 0. Mostrar uma mensagem "FIM!"
 após a contagem
 """
-from locale import atoi, format_string
 from collections.abc import Iterator
+from locale import atoi, format_string
 
 
 def n_to_zero(n: int = 10) -> Iterator[int]:
@@ -15,11 +15,7 @@ def n_to_zero(n: int = 10) -> Iterator[int]:
 
 
 def main():
-    print(
-        '=' * 8 + '\n' +
-        'N TO 0'.center(8, '-') + '\n' +
-        '=' * 8 + '\n'
-    )
+    print('=' * 8 + '\n' + 'N TO 0'.center(8, '-') + '\n' + '=' * 8 + '\n')
     while True:
         try:
             number = atoi(input('Start: '))
@@ -27,9 +23,7 @@ def main():
         except ValueError:
             print('Invalid input! Try again...')
     numbers = tuple(n_to_zero(number))
-    formatted_numbers = ', '.join(
-        format_string("%d", x) for x in numbers
-    )
+    formatted_numbers = ', '.join(format_string('%d', x) for x in numbers)
     print(formatted_numbers, end=' → END')
 
 

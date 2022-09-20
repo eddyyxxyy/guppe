@@ -11,10 +11,7 @@ def main() -> None:
     array = asarray(a)
     array_transpose = transpose(array)
     print(
-        '\nArray:'
-        f'\n{array}'
-        '\n\nArray transpose:'
-        f'\n{array_transpose}'
+        '\nArray:' f'\n{array}' '\n\nArray transpose:' f'\n{array_transpose}'
     )
 
 

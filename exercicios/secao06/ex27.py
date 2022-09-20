@@ -30,10 +30,7 @@ def harmonic_number() -> Iterator[float]:
 
 def main() -> None:
     harmo_num = tuple(harmonic_number())
-    print(
-        '\nsum of the harmonic series:'
-        f'\n-> {sum(harmo_num)}'
-    )
+    print('\nsum of the harmonic series:' f'\n-> {sum(harmo_num)}')
 
 
 if __name__ == '__main__':

@@ -28,10 +28,7 @@ def e_value() -> float:
 
 def main() -> None:
     number = e_value()
-    print(
-        '\nSum of the series:'
-        f'\n-> {number}'
-    )
+    print('\nSum of the series:' f'\n-> {number}')
 
 
 if __name__ == '__main__':

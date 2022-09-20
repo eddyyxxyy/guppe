@@ -4,8 +4,8 @@ um vetor que seja a intersecção entre os 2 vetores anteriores, ou seja, que
 contém apenas os números que estão em ambos os vetores. Não deve
 conter números repetidos.
 """
-from collections.abc import Iterator, Iterable
-from locale import setlocale, LC_ALL, format_string, atoi
+from collections.abc import Iterable, Iterator
+from locale import LC_ALL, atoi, format_string, setlocale
 
 
 def get_ints(n: int) -> Iterator[int]:
@@ -17,9 +17,7 @@ def get_ints(n: int) -> Iterator[int]:
     for i in range(n):
         while True:
             try:
-                integer = atoi(
-                    input(f'Enter the {i + 1}º integer:\n-> ')
-                )
+                integer = atoi(input(f'Enter the {i + 1}º integer:\n-> '))
                 yield integer
                 break
             except ValueError:
@@ -43,18 +41,12 @@ def main():
     v2 = tuple(get_ints(10))
     v3 = intersection(v1, v2)
     print(
-        '\nV1:'
-        '\n->', ', '.join(
-            format_string('%d', x) for x in v1
-        ) + '.',
-        '\nV2:'
-        '\n->', ', '.join(
-            format_string('%d', x) for x in v2
-        ) + '.',
-        '\nV3 (Intersection of V1 and V2):'
-        '\n->', ', '.join(
-            format_string('%d', x) for x in v3
-        ) + '.',
+        '\nV1:' '\n->',
+        ', '.join(format_string('%d', x) for x in v1) + '.',
+        '\nV2:' '\n->',
+        ', '.join(format_string('%d', x) for x in v2) + '.',
+        '\nV3 (Intersection of V1 and V2):' '\n->',
+        ', '.join(format_string('%d', x) for x in v3) + '.',
     )
 
 

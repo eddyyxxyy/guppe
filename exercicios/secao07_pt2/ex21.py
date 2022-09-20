@@ -6,7 +6,7 @@ Ofereça ao usuário um menu de opções:
 (c) adicionar uma constante às duas matrizes
 (d) imprimir as matrizes
 """
-from locale import setlocale, LC_ALL, atof
+from locale import LC_ALL, atof, setlocale
 
 from exercicios.secao07_pt2.ex17 import get_float_array
 
@@ -14,13 +14,17 @@ from exercicios.secao07_pt2.ex17 import get_float_array
 def get_option():
     while True:
         try:
-            option = input(
-                'a) Sum a1 and a2;'
-                '\nb) Subtract a1 from a2:'
-                '\nc) Sum a constant to arrays:'
-                '\nd) Show a1 and a2.'
-                '\n-> '
-            ).strip().lower()[0]
+            option = (
+                input(
+                    'a) Sum a1 and a2;'
+                    '\nb) Subtract a1 from a2:'
+                    '\nc) Sum a constant to arrays:'
+                    '\nd) Show a1 and a2.'
+                    '\n-> '
+                )
+                .strip()
+                .lower()[0]
+            )
             if option not in 'abcd':
                 raise ValueError
             break
@@ -32,9 +36,7 @@ def get_option():
 def get_value():
     while True:
         try:
-            value = atof(
-                input('Enter no. to sum to arrays:\n->')
-            )
+            value = atof(input('Enter no. to sum to arrays:\n->'))
             return value
         except ValueError:
             print('\nINVALID! Try again...')
@@ -81,7 +83,6 @@ def main() -> None:
         print()
         for row in a2:
             print(row)
-
 
 
 if __name__ == '__main__':

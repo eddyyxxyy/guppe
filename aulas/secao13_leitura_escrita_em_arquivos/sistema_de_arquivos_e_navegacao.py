@@ -106,5 +106,4 @@ print(arquivo[0].stat())  # Estatísticas sobre o arquivo
 # OBS: Quando utilizamos a função scandir(), nós precisamos fechá-la, assim como quando abrimos um arquivo.
 
 scanner.close()
-
 """

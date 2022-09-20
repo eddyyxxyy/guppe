@@ -33,7 +33,7 @@ def sequences() -> tuple[int, int, int, int]:
             elif i % 2 == 1:
                 calculo2 += i + (2 * termos - 1)
                 calculo3 += i
-            calculo3 += (2 * termos - 1)
+            calculo3 += 2 * termos - 1
             break
         if i % 2 == 0:
             calculo2 -= i

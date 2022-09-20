@@ -28,12 +28,11 @@ def main() -> None:
     print(networth)
     print(
         'How many months does it take for Carlos, receiving R$1000.00 and \n'
-        "earning 2% per month, to be surpassed by João, who receives one third \n"
+        'earning 2% per month, to be surpassed by João, who receives one third \n'
         "of Carlos' salary, earning 5% per month?"
         '\nFor João to have a cash value greater than Carlos, are necessary:'
         f'\n-> {networth[2]} months.'
     )
-
 
 
 if __name__ == '__main__':

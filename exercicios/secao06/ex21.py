@@ -9,7 +9,6 @@ from collections.abc import Iterator
 from locale import atoi, format_string
 from math import prod
 
-
 # from math import prod
 
 
@@ -46,9 +45,7 @@ def numbers_between() -> Iterator[int]:
 
 def main() -> None:
     numbers = tuple(numbers_between())
-    formatted_numbers = ", ".join(
-        format_string("%d", x) for x in numbers
-    )
+    formatted_numbers = ', '.join(format_string('%d', x) for x in numbers)
     print(
         '\nNumbers:'
         f'\n-> {formatted_numbers}'

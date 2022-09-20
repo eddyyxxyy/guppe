@@ -44,5 +44,4 @@ colore('Geek University', 'preto')
 
 OBS: O raise, assim como o retorn, finaliza a função, ou seja, nada após o raise será executado uma vez que o raise
 entrou em ação.
-
 """

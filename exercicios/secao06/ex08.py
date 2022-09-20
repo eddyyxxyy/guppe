@@ -2,8 +2,8 @@
 8) Escreva um programa que leia 10 números e escreva o menor
 valor lido e o maior valor lido.
 """
-from locale import atoi
 from collections.abc import Iterator
+from locale import atoi
 
 
 def get_numbers(n: int) -> Iterator[int]:

@@ -6,7 +6,7 @@ têm no máximo 10 elementos, mas nem todos os elementos são utilizados.
 No final escreva os elementos UTILIZADOS de v1 e v2.
 """
 from collections import deque
-from locale import setlocale, LC_ALL
+from locale import LC_ALL, setlocale
 
 from exercicios.secao07_pt1.ex07 import get_ints
 

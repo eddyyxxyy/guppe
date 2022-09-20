@@ -15,8 +15,6 @@ o lock do sistema operacional quanto ao uso do arquivo.
 
 Ele facilita o trabalho com arquivos, é a forma Pythônica de
 manipular arquivos.
-
-
 """
 
 # O bloco with

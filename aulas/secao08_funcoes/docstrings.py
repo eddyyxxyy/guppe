@@ -6,8 +6,6 @@ Podemos ter acesso a documentação de uma função usando a propriedade especia
 
 Podemos ainda fazer acesso a documentação com a função help():
 - help(funcao_n)
-
-
 """
 
 # Exemplos

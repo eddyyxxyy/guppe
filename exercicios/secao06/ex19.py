@@ -23,13 +23,8 @@ def main():
         else:
             print('Input must be between 100 and 999...\n')
     figures = [int(num) for num in str(number)]
-    formmated_figures = ", ".join(
-        format_string('"%d"', x) for x in figures
-    )
-    print(
-        f'\nEach digit in {number}:'
-        f'\n-> {formmated_figures}.'
-    )
+    formmated_figures = ', '.join(format_string('"%d"', x) for x in figures)
+    print(f'\nEach digit in {number}:' f'\n-> {formmated_figures}.')
 
 
 if __name__ == '__main__':

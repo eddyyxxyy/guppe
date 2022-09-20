@@ -19,18 +19,23 @@ def get_number(msg: str = 'Enter a number:\n-> ') -> float:
 
 def set_of_numbers() -> Iterator[dict] | None:
     while True:
-        value = get_number('Enter a number: \033[37m0 or less to exit\033[m\n-> ')
+        value = get_number(
+            'Enter a number: \033[37m0 or less to exit\033[m\n-> '
+        )
         if value <= 0:
             return None
-        yield dict(number=value, square=value**2, cubic=value**3, sqrroot=sqrt(value))
+        yield dict(
+            number=value,
+            square=value**2,
+            cubic=value**3,
+            sqrroot=sqrt(value),
+        )
 
 
 def main():
     values = tuple(set_of_numbers())
     for dicts in values:
-        print(
-            f'\n{dicts}'
-        )
+        print(f'\n{dicts}')
 
 
 if __name__ == '__main__':

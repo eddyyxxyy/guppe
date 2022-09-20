@@ -5,13 +5,11 @@ no vetor. Ao final seu programa deverá escrever a soma dos valores encontrados
 nas respectivas posições X e Y.
 """
 from collections import deque
-from locale import atof, atoi, setlocale, LC_ALL, format_string
+from locale import LC_ALL, atof, atoi, format_string, setlocale
 
 
 def get_index_for_sum(limit, x: str = 'x') -> int:
-    num = get_int(
-        f'Enter position of {x}:\n-> ', lim=limit
-    )
+    num = get_int(f'Enter position of {x}:\n-> ', lim=limit)
     return num
 
 
@@ -48,12 +46,8 @@ def main() -> None:
     numbers = deque()
     how_many_numbers = get_int('How many numbers you want to enter?\n-> ')
     for i in range(how_many_numbers):
-        numbers.append(
-            get_float(f'Enter the {i + 1}º value:\n-> ')
-        )
-    formatted_numbers = ', '.join(
-        format_string('%.1f', x) for x in numbers
-    )
+        numbers.append(get_float(f'Enter the {i + 1}º value:\n-> '))
+    formatted_numbers = ', '.join(format_string('%.1f', x) for x in numbers)
     print('-' * 30)
     x: int = get_index_for_sum(limit=len(numbers))
     y: int = get_index_for_sum(limit=len(numbers), x='y')

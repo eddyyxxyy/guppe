@@ -77,5 +77,4 @@ print([bool(valor) for valor in [0, [], '', True, 1, 3.14]])
 # 5
 
 print([str(numero) for numero in [1, 2, 3, 4, 5]])
-
 """

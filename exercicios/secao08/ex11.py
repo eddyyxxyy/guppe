@@ -3,7 +3,7 @@
 uma letra. Se a letra for A, a função deverá calcular a média aritmética das
 notas do aluno; se for P, deverá calcular a média ponderada, com pesos 5, 3, e 2.
 """
-from locale import setlocale, LC_ALL
+from locale import LC_ALL, setlocale
 
 from exercicios.secao08.ex09 import get_float
 

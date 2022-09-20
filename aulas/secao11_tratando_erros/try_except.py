@@ -87,5 +87,4 @@ dic = {'nome': 'Geek'}
 # print(pega_valor(dic, 'nome'))
 # print(pega_valor(dic, 'batata'))
 print(pega_valor(dic, 8))
-
 """

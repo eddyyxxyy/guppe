@@ -10,7 +10,9 @@ from locale import atoi, format_string
 def get_times():
     while True:
         try:
-            times: int = atoi(input('How many numbers you want to analyse?\n-> ').strip())
+            times: int = atoi(
+                input('How many numbers you want to analyse?\n-> ').strip()
+            )
             if times < 0:
                 print('The amount of numbers must be positive or zero.\n')
                 continue
@@ -19,7 +21,9 @@ def get_times():
             print('The amount of numbers must be positive or zero.\n')
 
 
-def get_numbers(times: int, msg: str = 'Enter a number:\n-> ') -> Iterator[int]:
+def get_numbers(
+    times: int, msg: str = 'Enter a number:\n-> '
+) -> Iterator[int]:
     counter: int = 0
     while counter < times:
         counter += 1
@@ -42,9 +46,7 @@ def main():
         sleep(2)
         exit()
     numbers = tuple(get_numbers(times, 'Enter a positive integer:\n-> '))
-    formatted_numbers = ", ".join(
-        format_string("%d", x) for x in numbers
-    )
+    formatted_numbers = ', '.join(format_string('%d', x) for x in numbers)
     print(
         '\nNumbers:'
         f'\n{formatted_numbers}'

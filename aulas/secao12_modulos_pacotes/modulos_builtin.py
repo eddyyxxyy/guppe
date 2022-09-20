@@ -49,5 +49,4 @@ lista = ['Geek', 'University', 'Python']
 shuffle(lista)
 print(lista)
 print(choice('University'))
-
 """

@@ -4,7 +4,9 @@
 """
 from math import log10
 
-n = str(input('Informe um número inteiro positivo: ').strip().replace(',', '.'))
+n = str(
+    input('Informe um número inteiro positivo: ').strip().replace(',', '.')
+)
 try:
     int(n)
 except ValueError:

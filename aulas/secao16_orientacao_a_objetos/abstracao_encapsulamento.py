@@ -7,8 +7,6 @@ dentro de um grupo lógico e hierarquico utilizando classes.
 Seria encapsular, colocar em uma classe, os dados relevantes do que será instânciado,
 do que precisa ser instânciado. A abstração é o ato de expor os dados relevantes de
 uma classe escondendo atributos e métodos privados de usuários.
-
-
 """
 
 
@@ -24,7 +22,9 @@ class Conta:
         Conta.contador += 1
 
     def extrato(self):
-        print(f'Saldo de {self.__saldo} do titular {self.__titular} com limite de {self.__limite}')
+        print(
+            f'Saldo de {self.__saldo} do titular {self.__titular} com limite de {self.__limite}'
+        )
 
     def depositar(self, valor):
         if valor > 0:

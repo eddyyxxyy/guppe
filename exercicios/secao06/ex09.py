@@ -2,8 +2,8 @@
 9) Faça um programa que leia um número inteiro N e depois imprima
 os N primeiros números naturais ímpares
 """
-from locale import atoi, format_string
 from collections.abc import Iterator
+from locale import atoi, format_string
 
 
 def first_n_oddnumbers(n: int) -> Iterator[int]:
@@ -23,13 +23,8 @@ def main():
         except ValueError:
             print('Invalid number! Try again...')
     numbers = tuple(first_n_oddnumbers(n))
-    formatted_numbers = ", ".join(
-        format_string("%d", x) for x in numbers
-    )
-    print(
-        f'\nFirst {n} natural odd numbers:'
-        f'\n→ {formatted_numbers}'
-    )
+    formatted_numbers = ', '.join(format_string('%d', x) for x in numbers)
+    print(f'\nFirst {n} natural odd numbers:' f'\n→ {formatted_numbers}')
 
 
 if __name__ == '__main__':

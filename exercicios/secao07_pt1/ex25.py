@@ -11,10 +11,7 @@ def main():
     numbers = []
     while len(numbers) < 100:
         numbers = [x for x in range(130) if x % 7 != 0 and x % 10 != 7]
-    print(
-        'Numbers:'
-        f'\n-> {numbers}'
-    )
+    print('Numbers:' f'\n-> {numbers}')
 
 
 if __name__ == '__main__':

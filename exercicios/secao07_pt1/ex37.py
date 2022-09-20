@@ -6,7 +6,7 @@ Dado o vetor da questão anterior, proponha um algoritmo para ordenar os
 elementos.
 """
 from collections.abc import Iterator
-from locale import setlocale, LC_ALL, atof
+from locale import LC_ALL, atof, setlocale
 
 
 def get_floats(n: int) -> Iterator[float]:
@@ -18,9 +18,7 @@ def get_floats(n: int) -> Iterator[float]:
     for i in range(n):
         while True:
             try:
-                number = atof(
-                    input(f'Enter the {i + 1}º number:\n-> ')
-                )
+                number = atof(input(f'Enter the {i + 1}º number:\n-> '))
                 yield number
                 break
             except ValueError:
@@ -31,10 +29,7 @@ def main() -> None:
     setlocale(LC_ALL, 'pt_BR.UTF-8')
     a = list(get_floats(11))
     a = sorted(a[:6]) + sorted(a[-1:-6:-1], reverse=True)
-    print(
-        '\nArray "A":'
-        f'\n-> {a}.'
-    )
+    print('\nArray "A":' f'\n-> {a}.')
 
 
 if __name__ == '__main__':

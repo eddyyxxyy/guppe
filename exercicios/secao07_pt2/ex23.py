@@ -1,7 +1,7 @@
 """
 23) Faça um programa que leia uma matriz A de tamanho 3 x 3 e calcule B = A²
 """
-from locale import setlocale, LC_ALL
+from locale import LC_ALL, setlocale
 
 from exercicios.secao07_pt2.ex17 import get_float_array
 
@@ -21,7 +21,6 @@ def main() -> None:
     print('\nArray B:')
     for row in b:
         print(row)
-
 
 
 if __name__ == '__main__':

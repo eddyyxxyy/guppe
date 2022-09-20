@@ -4,12 +4,20 @@ A primeira e a segunda prova têm peso 1 e a terceira tem peso 2. Ao final,
 mostrar a média do aluno e indicar se o aluno foi aprovado ou reprovado.
 A nota para aprovação deve ser igual ou superior a 60 pontos.
 """
-print('-' * 30 + '\n' + 'Cálculo de Aprovação'.center(30, '-') + '\n' + '-' * 30)
+print(
+    '-' * 30 + '\n' + 'Cálculo de Aprovação'.center(30, '-') + '\n' + '-' * 30
+)
 notas = []
 for prova in range(3):
     while True:
         try:
-            notas.append(float(input(f'Informe a nota da {prova + 1}º prova (0 a 100): ').strip().replace(',', '.')))
+            notas.append(
+                float(
+                    input(f'Informe a nota da {prova + 1}º prova (0 a 100): ')
+                    .strip()
+                    .replace(',', '.')
+                )
+            )
         except ValueError:
             print('Nota inválida!')
         else:

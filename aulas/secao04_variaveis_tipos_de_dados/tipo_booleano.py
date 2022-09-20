@@ -28,5 +28,4 @@ OBS: É uma operação binária, necessita de dois valores. Ou um ou outro deve 
 
 E → and
 OBS: Também é uma operação binária. Os dois precisam ser verdadeiros para retornar verdadeiro.
-
 """

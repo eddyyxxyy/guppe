@@ -52,5 +52,4 @@ numeros = [1, 2, 3, 4, 5, 6, 7]
 print(soma_todos_numeros(*numeros))  # Desempacotador "*", para desempacotar os items da lista.
 
 # O asterisco serve para informarmos o Python que estamos passando como argumento uma coleção de dados.
-
 """

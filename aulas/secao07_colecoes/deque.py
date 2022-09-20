@@ -34,5 +34,4 @@ print(deq)
 print(deq.popleft())  # Remove o primeiro elemento
 
 print(deq)
-
 """

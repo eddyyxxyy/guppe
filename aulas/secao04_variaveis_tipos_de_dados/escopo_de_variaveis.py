@@ -11,5 +11,4 @@ Dois casos de escopo:
 
 Para declarar variáveis em Python fazemos:
 nome_da_variavel = valor_da_variavel
-
 """

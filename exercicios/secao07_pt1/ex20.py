@@ -5,7 +5,7 @@ apenas com os números ímpares do primeiro vetor. Imprima os dois vetores,
 2 elementos por linha.
 """
 from collections.abc import Iterator
-from locale import setlocale, LC_ALL, atoi
+from locale import LC_ALL, atoi, setlocale
 
 
 def get_ints_0_to_50(n: int) -> Iterator[int]:
@@ -31,14 +31,14 @@ def main() -> None:
     setlocale(LC_ALL, 'pt_BR.UTF-8')
     numbers = tuple(get_ints_0_to_50(10))
     odd_numbers = tuple(x for x in numbers if x % 2 != 0)
-    print(f"\nNumbers: ")
+    print(f'\nNumbers: ')
     for i in range(0, len(numbers), 2):
-        print(f"{numbers[i]}   ", end='')
+        print(f'{numbers[i]}   ', end='')
         if len(numbers) > i + 1:
             print(numbers[i + 1])
-    print(f"\nOdd numbers: ")
+    print(f'\nOdd numbers: ')
     for i in range(0, len(odd_numbers), 2):
-        print(f"{odd_numbers[i]}   ", end='')
+        print(f'{odd_numbers[i]}   ', end='')
         if len(odd_numbers) > i + 1:
             print(odd_numbers[i + 1])
 

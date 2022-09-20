@@ -8,7 +8,7 @@ elif linha == coluna:  # Diagonal principal
 
 elif linha > coluna:  # Abaixo da diagonal principal
 """
-from locale import setlocale, LC_ALL, atoi
+from locale import LC_ALL, atoi, setlocale
 
 
 def get_int_array(rows: int, columns: int) -> list[list[int]]:
@@ -18,9 +18,7 @@ def get_int_array(rows: int, columns: int) -> list[list[int]]:
         for j in range(columns):
             while True:
                 try:
-                    value = atoi(
-                        input(f'Enter no. to [{i},{j}]:\n-> ')
-                    )
+                    value = atoi(input(f'Enter no. to [{i},{j}]:\n-> '))
                     break
                 except ValueError:
                     print('\033[31mINVALID! Try again...\033[m\n')
@@ -43,7 +41,6 @@ def main():
         '\nSum of values above main diagonal:'
         f'\n-> {sum_above_diagonal_array}.'
     )
-
 
 
 if __name__ == '__main__':

@@ -4,7 +4,7 @@ deverá fazer uma busca desse valor na matriz e, ao final, escrever a localizaç
 (linha e coluna) ou mensagem de "não encontrado".
 """
 from collections import deque
-from locale import setlocale, LC_ALL, atoi
+from locale import LC_ALL, atoi, setlocale
 
 from exercicios.secao07_pt1.ex35 import get_int
 
@@ -24,9 +24,7 @@ def get_int_array(rows: int, columns: int) -> deque[deque]:
         for i in range(0, columns):
             while True:
                 try:
-                    value = atoi(
-                        input(f'Enter no. for [{c},{i}]:\n-> ')
-                    )
+                    value = atoi(input(f'Enter no. for [{c},{i}]:\n-> '))
                     break
                 except ValueError:
                     print('\033[31mINVALID! Try again!\033[m')

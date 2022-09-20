@@ -28,10 +28,7 @@ def series_value(n: int = 5) -> float:
 def main():
     number = get_integer('Enter an integer for series S:\n-> ')
     serie = series_value(number)
-    print(
-        f'\nSum of the series ({number}):'
-        f'\n-> {serie}'
-    )
+    print(f'\nSum of the series ({number}):' f'\n-> {serie}')
 
 
 if __name__ == '__main__':

@@ -27,6 +27,4 @@ for num in range(1, 11):
 
 for num in range(0, 21, 2):  # inclusive podemos inverter com (20, -1, -2)
     print(num)
-
-
 """

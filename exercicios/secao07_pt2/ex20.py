@@ -5,7 +5,7 @@
 (c) Substitua os valores da sexta coluna pela soma dos valores das colunas 1 e 2.
 (d) Imprima a matriz modificada.
 """
-from locale import setlocale, LC_ALL
+from locale import LC_ALL, setlocale
 
 from exercicios.secao07_pt2.ex13 import get_float_array
 
@@ -28,7 +28,7 @@ def main() -> None:
                 array[row][column] = array[row][1] + array[row][3]
     arithmetic_average = arithmetic_average / 6
     print(
-        f'\n\nSum of all odd columns:\n-> {odd_sum:n}' 
+        f'\n\nSum of all odd columns:\n-> {odd_sum:n}'
         f'\n\nSum of all arithmetic average:\n-> {arithmetic_average:n}'
     )
     print('\n\nModified array:')

@@ -2,8 +2,8 @@
 2) Escreva um prorgama que escreva na tela, de 1 até 100, de 1 em 1, 2 vezes.
 A primeira vez deve usar a estrutura de repetição for, a segunda while.
 """
-from locale import format_string
 from collections.abc import Iterator
+from locale import format_string
 
 
 def one_to_hundred_for() -> Iterator[int]:
@@ -22,26 +22,19 @@ def one_to_hundred_while() -> Iterator[int]:
 
 def main() -> None:
     print(
-        '=' * 30 + '\n' +
-        'FROM 1 TO 100'.center(30, '-') + '\n' +
-        '=' * 30 + '\n'
+        '=' * 30
+        + '\n'
+        + 'FROM 1 TO 100'.center(30, '-')
+        + '\n'
+        + '=' * 30
+        + '\n'
     )
     numbers_a = tuple(one_to_hundred_for())
-    formatted_numbers_a = ", ".join(
-        format_string("%d", x) for x in numbers_a
-    )
+    formatted_numbers_a = ', '.join(format_string('%d', x) for x in numbers_a)
     numbers_b = tuple(one_to_hundred_while())
-    formatted_numbers_b = ", ".join(
-        format_string("%d", x) for x in numbers_b
-    )
-    print(
-        'Using for:' 
-        f'\n{formatted_numbers_a}'
-    )
-    print(
-        '\nUsing while:'
-        f'\n{formatted_numbers_b}'
-    )
+    formatted_numbers_b = ', '.join(format_string('%d', x) for x in numbers_b)
+    print('Using for:' f'\n{formatted_numbers_a}')
+    print('\nUsing while:' f'\n{formatted_numbers_b}')
 
 
 if __name__ == '__main__':

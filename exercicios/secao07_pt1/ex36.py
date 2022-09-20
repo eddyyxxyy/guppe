@@ -3,7 +3,7 @@
 e no final escreva os elementos do vetor ordenado.
 """
 from collections.abc import Iterator
-from locale import setlocale, LC_ALL, atof
+from locale import LC_ALL, atof, setlocale
 
 
 def get_floats(n: int) -> Iterator[float]:
@@ -15,9 +15,7 @@ def get_floats(n: int) -> Iterator[float]:
     for i in range(n):
         while True:
             try:
-                number = atof(
-                    input(f'Enter the {i + 1}º number:\n-> ')
-                )
+                number = atof(input(f'Enter the {i + 1}º number:\n-> '))
                 yield number
                 break
             except ValueError:
@@ -27,10 +25,7 @@ def get_floats(n: int) -> Iterator[float]:
 def main():
     setlocale(LC_ALL, 'pt_BR.UTF-8')
     v = sorted(get_floats(10))
-    print(
-        '\nArray "V":'
-        f'\n-> {v}'
-    )
+    print('\nArray "V":' f'\n-> {v}')
 
 
 if __name__ == '__main__':

@@ -4,15 +4,13 @@ e retorne a soma de todos os seus algarismos. Por exemplo,
 ao número 251 corresponderá o valor 8 (2 + 5 + 1). Se o número lido
 não for maior do que zero, o programa terminará com a mensagem "Número inválido"
 """
-from locale import setlocale, LC_ALL, atoi, format_string
+from locale import LC_ALL, atoi, format_string, setlocale
 
 
 def get_positive_int() -> int:
     while True:
         try:
-            value = atoi(
-                input('Enter positive integer:\n-> ')
-            )
+            value = atoi(input('Enter positive integer:\n-> '))
             if value < 0:
                 raise ValueError
             return value
@@ -28,9 +26,7 @@ def sum_of_algaris() -> list[int]:
 def main() -> None:
     setlocale(LC_ALL, '')
     value = sum_of_algaris()
-    formatted_value = ', '.join(
-        format_string('%d', x) for x in value
-    )
+    formatted_value = ', '.join(format_string('%d', x) for x in value)
     print(
         '\n\nNumbers:'
         f'\n-> {formatted_value}.'

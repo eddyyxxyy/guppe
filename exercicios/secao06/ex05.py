@@ -3,8 +3,8 @@
 10 valores e some-os.
 """
 
-from locale import atof, format_string, setlocale, LC_ALL
 from collections.abc import Iterator
+from locale import LC_ALL, atof, format_string, setlocale
 
 
 def get_numbers(n: int) -> Iterator[float]:
@@ -20,9 +20,7 @@ def get_numbers(n: int) -> Iterator[float]:
 def main() -> None:
     setlocale(LC_ALL, 'pt-BR')
     numbers = tuple(get_numbers(10))
-    formatted_numbers = ", ".join(
-        format_string('%.1f', x) for x in numbers
-    )
+    formatted_numbers = ', '.join(format_string('%.1f', x) for x in numbers)
     print(
         '\nNúmeros:'
         f'\n{formatted_numbers}'

@@ -3,12 +3,22 @@
 """
 from collections import deque
 
-print('-=' * 15 + '\n' + 'NÚMEROS EM ORDEM CRESCENTE'.center(30, '-') + '\n' + '=-' * 15)
+print(
+    '-=' * 15
+    + '\n'
+    + 'NÚMEROS EM ORDEM CRESCENTE'.center(30, '-')
+    + '\n'
+    + '=-' * 15
+)
 numbers: deque = deque()
 for i in range(3):
     while True:
         try:
-            numbers.append(float(input(f'Informe o {i}º número: ').strip().replace(',', '.')))
+            numbers.append(
+                float(
+                    input(f'Informe o {i}º número: ').strip().replace(',', '.')
+                )
+            )
         except ValueError:
             print(f'Valor inválido!')
             continue

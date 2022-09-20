@@ -13,6 +13,8 @@ numpy = "^1.23.3"
 [tool.poetry.group.dev.dependencies]
 pipdeptree = "^2.3.1"
 pip-autoremove = "^0.10.0"
+isort = "^5.10.1"
+blue = "^0.9.1"
 
 [build-system]
 requires = ["poetry-core"]

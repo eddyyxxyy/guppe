@@ -21,13 +21,10 @@ def input_integer(msg: str) -> Iterator[int] or int:
 
 def main():
     print('\033[37mEven Numbers\033[m\n')
-    numbers = tuple(input_integer(
-        'Enter an integer: \033[37m1000 to exit\033[m\n-> '
-        )
+    numbers = tuple(
+        input_integer('Enter an integer: \033[37m1000 to exit\033[m\n-> ')
     )
-    formatted_numbers = ", ".join(
-        format_string("%d", x) for x in numbers
-    )
+    formatted_numbers = ', '.join(format_string('%d', x) for x in numbers)
     print(
         '\nNumbers:'
         f'\n-> {formatted_numbers}.'

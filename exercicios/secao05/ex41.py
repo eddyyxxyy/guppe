@@ -16,10 +16,11 @@ imc: float = 0
 
 while True:
     try:
-        altura = float(input(
-            'Sua altura: \033[37mEx: 1.82\033[m\n'
-            '->  '
-        ).strip().replace(',', '.'))
+        altura = float(
+            input('Sua altura: \033[37mEx: 1.82\033[m\n' '->  ')
+            .strip()
+            .replace(',', '.')
+        )
     except ValueError:
         print('Altura inválida! Informe novamente...\n')
         continue
@@ -29,10 +30,11 @@ while True:
             continue
         while True:
             try:
-                quilos = float(input(
-                    'Seu peso: \033[37mEx: 64.5\033[m\n'
-                    '->  '
-                ).strip().replace(',', '.'))
+                quilos = float(
+                    input('Seu peso: \033[37mEx: 64.5\033[m\n' '->  ')
+                    .strip()
+                    .replace(',', '.')
+                )
             except ValueError:
                 print('Peso inválido! Informe novamente...\n')
                 continue
@@ -46,29 +48,16 @@ while True:
 imc = quilos / (altura * altura)
 
 if imc < 18.5:
-    print(
-        f'Seu IMC: {imc:.2f}\n'
-        f'Classificação: Abaixo do peso'
-    )
+    print(f'Seu IMC: {imc:.2f}\n' f'Classificação: Abaixo do peso')
 elif 18.6 <= imc <= 24.9:
-    print(
-        f'Seu IMC: {imc:.2f}\n'
-        f'Classificação: Saudável'
-    )
+    print(f'Seu IMC: {imc:.2f}\n' f'Classificação: Saudável')
 elif 25.0 <= imc <= 29.9:
-    print(
-        f'Seu IMC: {imc:.2f}\n'
-        f'Classificação: Peso em excesso'
-    )
+    print(f'Seu IMC: {imc:.2f}\n' f'Classificação: Peso em excesso')
 elif 30.0 <= imc <= 34.9:
-    print(
-        f'Seu IMC: {imc:.2f}\n'
-        f'Classificação: Obesidade de Grau I'
-    )
+    print(f'Seu IMC: {imc:.2f}\n' f'Classificação: Obesidade de Grau I')
 elif 35.0 <= imc <= 39.9:
     print(
-        f'Seu IMC: {imc:.2f}\n'
-        f'Classificação: Obesidade de Grau II (Severa)'
+        f'Seu IMC: {imc:.2f}\n' f'Classificação: Obesidade de Grau II (Severa)'
     )
 else:
     print(

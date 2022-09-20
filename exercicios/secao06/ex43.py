@@ -7,7 +7,9 @@ from collections.abc import Iterator
 from locale import atoi
 
 
-def get_age(msg: str = 'Enter an age: \033[37m0 to exit\033[m\n-> ') -> Iterator[int | None]:
+def get_age(
+    msg: str = 'Enter an age: \033[37m0 to exit\033[m\n-> ',
+) -> Iterator[int | None]:
     while True:
         try:
             age: int = atoi(input(msg).strip())
@@ -26,8 +28,7 @@ def average_age() -> float:
 def main():
     ages = average_age()
     print(
-        '\nAverage age between the informed values:'
-        f'\n-> {ages:.2f} years.'
+        '\nAverage age between the informed values:' f'\n-> {ages:.2f} years.'
     )
 
 

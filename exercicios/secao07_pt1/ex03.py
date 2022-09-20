@@ -4,7 +4,7 @@ das componentes deste vetor, armazenando o resultado em outro vetor. Os conjunto
 10 elementos cada. Imprimir todos os conjuntos.
 """
 from collections import deque
-from locale import atof, setlocale, LC_NUMERIC, format_string
+from locale import LC_NUMERIC, atof, format_string, setlocale
 
 
 def get_num(msg: str) -> float:
@@ -21,16 +21,10 @@ def main() -> None:
     numbers = deque()
     sqr = deque()
     for i in range(10):
-        numbers.append(
-            get_num('Enter a number:\n-> ')
-        )
+        numbers.append(get_num('Enter a number:\n-> '))
         sqr.append(numbers[i] ** 2)
-    formated_numbers = ' - '.join(
-        format_string('%.1f', x) for x in numbers
-    )
-    formated_sqr = ' - '.join(
-        format_string('%.1f', x) for x in sqr
-    )
+    formated_numbers = ' - '.join(format_string('%.1f', x) for x in numbers)
+    formated_sqr = ' - '.join(format_string('%.1f', x) for x in sqr)
     print(
         '\nList of numbers:'
         f'\n-> {formated_numbers}.'

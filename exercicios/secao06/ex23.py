@@ -29,9 +29,8 @@ def main() -> None:
         format_string('%d', x) for x in number_dividers
     )
     print(
-        f'\nDividers for {number_dividers[-1]}:'
-        f'\n-> {formatted_dividers}.'
-        , end='\n'
+        f'\nDividers for {number_dividers[-1]}:' f'\n-> {formatted_dividers}.',
+        end='\n',
     )
     if len(number_dividers) == 2 or len(number_dividers) == 1:
         print(f'{number_dividers[-1]} is a prime number!')

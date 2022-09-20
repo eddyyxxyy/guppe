@@ -5,13 +5,10 @@ Objetos -> São instâncias da Classe, ou seja, após o mapeamento do objeto
 do mundo real para sua representação computacional, devemos poder criar
 quantos objetos forem necessários. Podemos pensar nos objetos/instâncias
 de uma Classe como variáveis do tipo definido na classe.
-
-
 """
 
 
 class Lampada:
-
     def __init__(self, cor, voltagem, luminosidade):
         self.__cor = cor
         self.__voltagem = voltagem
@@ -40,7 +37,6 @@ class ContaCorrente:
 
 
 class Usuario:
-
     def __init__(self, nome, sobrenome, email, senha):
         self.__nome = nome
         self.__sobrenome = sobrenome
@@ -54,4 +50,6 @@ print(f'A lâmpada está ligada? {lamp1.checa_lampada()}')
 
 cc1 = ContaCorrente(5000, 20000)  # Instância do tipo ContaCorrente
 
-user1 = Usuario('Edson', 'Pimenta', 'edson@gmail.com', '123456')  # Instância do tipo Usuário
+user1 = Usuario(
+    'Edson', 'Pimenta', 'edson@gmail.com', '123456'
+)  # Instância do tipo Usuário

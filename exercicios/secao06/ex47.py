@@ -10,18 +10,16 @@ O programa deve possibilitar ao usuário a escolha da operação desejaada,
 a exibição do resultado e a volta ao menu de opções. O programa só termina
 quando for escolhida a opção de saída (opção 5).
 """
-from locale import atoi, atof
+from locale import atof, atoi
 from time import sleep
 
 
 def title_menu(msg: str = 'MATH OPERATIONS MENU') -> str:
     string_title = str(
-        '=' * 22 + '\n' +
-        msg.center(22, '-') + '\n' +
-        '=' * 22 + '\n' 
-        '1 - Sum;' 
-        '\n2 - Subtraction;' 
-        '\n3 - Multiplication;' 
+        '=' * 22 + '\n' + msg.center(22, '-') + '\n' + '=' * 22 + '\n'
+        '1 - Sum;'
+        '\n2 - Subtraction;'
+        '\n3 - Multiplication;'
         '\n4 - Division;'
         '\n5 - Exit.'
     )
@@ -73,11 +71,7 @@ def main() -> None:
             break
         numbers = get_numbers_operation()
         result = operations(choice, numbers)
-        print(
-            '\nResult:' +
-            f'\n-> {result}\n' +
-            '-' * 22
-        )
+        print('\nResult:' + f'\n-> {result}\n' + '-' * 22)
         sleep(2)
 
 

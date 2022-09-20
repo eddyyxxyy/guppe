@@ -9,7 +9,9 @@ n = float(input('Informe um número: ').strip().replace(',', '.'))
 if n == 0:
     print('O número 0 ao quadrado resulta em 0 e sua raiz quadrada também.')
 elif n > 0:
-    print(f'O quadrado de {n} corresponde à {n ** 2};\n'
-          f'A raiz quadrada de {n} é {sqrt(n)}')
+    print(
+        f'O quadrado de {n} corresponde à {n ** 2};\n'
+        f'A raiz quadrada de {n} é {sqrt(n)}'
+    )
 else:
     print(f'{n} é negativo.')

@@ -29,10 +29,7 @@ def triangle() -> float:
 
 def main():
     area: float = triangle()
-    print(
-        'Area:'
-        f'\n-> {area}²'
-    )
+    print('Area:' f'\n-> {area}²')
 
 
 if __name__ == '__main__':

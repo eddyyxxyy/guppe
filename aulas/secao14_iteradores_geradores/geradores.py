@@ -68,7 +68,6 @@ for n in gen:
 gen = list(conta_ate(10))
 
 print(gen)
-
 """
 
 # Exemplo de generator function:

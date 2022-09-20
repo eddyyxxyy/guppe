@@ -1,7 +1,7 @@
 """
 10) Faça uma função que receba dois números e retorne qual deles é o maior.
 """
-from locale import setlocale, LC_ALL
+from locale import LC_ALL, setlocale
 
 from exercicios.secao08.ex09 import get_float
 

@@ -10,9 +10,8 @@ from numpy.random import randint
 def main() -> None:
     array = randint(100, size=(5, 5))
     print(
-        'BINGO'.center(20, '-') + '\n\n' +
-        'Generated card:',
-        '\n' + str(array).center(18)
+        'BINGO'.center(20, '-') + '\n\n' + 'Generated card:',
+        '\n' + str(array).center(18),
     )
 
 

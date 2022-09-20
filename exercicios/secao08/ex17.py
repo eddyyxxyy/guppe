@@ -3,7 +3,7 @@
 por parâmetro e retorne a soma dos N números inteiros existentes
 entre eles.
 """
-from locale import atoi, setlocale, LC_ALL, format_string
+from locale import LC_ALL, atoi, format_string, setlocale
 
 
 def n_between(a: int, b: int) -> tuple[int, set] | str:
@@ -24,9 +24,7 @@ def n_between(a: int, b: int) -> tuple[int, set] | str:
 def get_positive_int(name: str) -> int:
     while True:
         try:
-            number = atoi(
-                input(f'Enter no. (integer) for "{name}":\n-> ')
-            )
+            number = atoi(input(f'Enter no. (integer) for "{name}":\n-> '))
             if number < 0:
                 raise ValueError
             return number

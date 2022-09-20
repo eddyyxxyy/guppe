@@ -8,7 +8,13 @@ dessa pessoa.
     |De 1,20 a 1,70|   B   |             E             |      H       |
     |Maior que 1,70|   C   |             F             |      I       |
 """
-print('-=' * 15 + '\n' + 'CLASSIFICAÇÃO POR PESO/ALTURA'.center(30, '-') + '\n' + '=-' * 15)
+print(
+    '-=' * 15
+    + '\n'
+    + 'CLASSIFICAÇÃO POR PESO/ALTURA'.center(30, '-')
+    + '\n'
+    + '=-' * 15
+)
 altura: float = 0
 peso: float = 0
 while True:
@@ -23,7 +29,9 @@ while True:
             continue
         while True:
             try:
-                peso = float(input('Informe seu peso: ').strip().replace(',', '.'))
+                peso = float(
+                    input('Informe seu peso: ').strip().replace(',', '.')
+                )
             except ValueError:
                 print('\nPeso inválido! Informe novamente...\n')
                 continue

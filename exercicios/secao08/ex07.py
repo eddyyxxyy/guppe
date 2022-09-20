@@ -3,7 +3,7 @@
 convertida em graus Fahrenheit. A fórmula de conversão é: F = C * (9.0/5.0) + 32.0,
 sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.
 """
-from locale import setlocale, LC_ALL, atof
+from locale import LC_ALL, atof, setlocale
 
 from exercicios.secao08 import temp_converter
 
@@ -11,9 +11,7 @@ from exercicios.secao08 import temp_converter
 def get_float(name: str):
     while True:
         try:
-            value = atof(
-                input(f'Enter {name}:\n-> ')
-            )
+            value = atof(input(f'Enter {name}:\n-> '))
             return value
         except ValueError:
             print(f'\033[31mINVALID {name}! Try again...\033[m\n')

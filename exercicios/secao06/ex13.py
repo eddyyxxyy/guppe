@@ -7,7 +7,7 @@ from collections.abc import Iterator
 from locale import atoi
 
 
-def get_num(prompt: str = "Enter a number: ") -> int:
+def get_num(prompt: str = 'Enter a number: ') -> int:
     while True:
         try:
             number = atoi(input(prompt + '\n-> ').strip())
@@ -15,7 +15,7 @@ def get_num(prompt: str = "Enter a number: ") -> int:
                 continue
             return number
         except ValueError:
-            print("Must enter a positive integer!\n")
+            print('Must enter a positive integer!\n')
 
 
 def even_numbers_till_n(invert: bool = False) -> Iterator[int]:
@@ -34,7 +34,9 @@ def main():
     print('All the even numbers till "n"')
     while True:
         try:
-            invert = atoi(input('\n(0)Descending or (1)Ascending order?\n-> ').strip())
+            invert = atoi(
+                input('\n(0)Descending or (1)Ascending order?\n-> ').strip()
+            )
             if invert != 1 and invert != 0:
                 print('Only type 0 or 1...\n')
                 continue

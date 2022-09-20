@@ -3,7 +3,7 @@
 lidos juntamente com o maior, o menor e a média dos valores.
 """
 from collections.abc import Iterator
-from locale import setlocale, LC_ALL, atof, format_string
+from locale import LC_ALL, atof, format_string, setlocale
 
 
 def get_values(n: int) -> Iterator[float]:
@@ -15,9 +15,7 @@ def get_values(n: int) -> Iterator[float]:
     for i in range(n):
         while True:
             try:
-                number = atof(
-                    input(f'Enter {i + 1}º number:\n-> ')
-                )
+                number = atof(input(f'Enter {i + 1}º number:\n-> '))
                 yield number
                 break
             except ValueError:
@@ -31,8 +29,7 @@ def main():
         format_string('%.1f', x, grouping=True) for x in numbers
     )
     print(
-        '-' * 30 +
-        '\nNumbers:'
+        '-' * 30 + '\nNumbers:'
         f'\n-> {formatted_numbers}'
         '\nAverage of Numbers:'
         f'\n-> {sum(numbers) / len(numbers):n}'

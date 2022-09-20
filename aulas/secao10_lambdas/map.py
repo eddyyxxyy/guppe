@@ -54,14 +54,19 @@ print(list(map(lambda r: math.pi * (r ** 2), raios)))
 # Utilizamos a função map(f, dados) onde map irá mapear cada elemento de 'dados' e aplicar a função.
 
 # O Map Object: f(a1), f(a2), f(...), f(an)
-
-
 """
 
 # Mais um exemplo:
 
-cidades = [('Berlin', 29), ('Cairo', 36), ('Buenos Aires', 19), ('Los Angeles', 26), ('Tokio', 27), ('Nova York', 28),
-           ('Londres', 22)]
+cidades = [
+    ('Berlin', 29),
+    ('Cairo', 36),
+    ('Buenos Aires', 19),
+    ('Los Angeles', 26),
+    ('Tokio', 27),
+    ('Nova York', 28),
+    ('Londres', 22),
+]
 
 print(cidades)
 
@@ -69,7 +74,9 @@ print(cidades)
 
 # Lambda para isso:
 
-print(list(map(lambda dado: (dado[0], round((9/5) * dado[1] + 32)), cidades)))
+print(
+    list(map(lambda dado: (dado[0], round((9 / 5) * dado[1] + 32)), cidades))
+)
 
 """
 Estamo mandando imprimir um map convertido para uma lista (assim sendo possível visualizar os dados contidos no objeto

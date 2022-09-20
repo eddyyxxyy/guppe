@@ -8,7 +8,7 @@ if linha == coluna:  # Diagonal principal
 
 if linha > coluna:  # Abaixo da diagonal principal
 """
-from locale import setlocale, LC_ALL
+from locale import LC_ALL, setlocale
 
 from exercicios.secao07_pt2.ex08 import get_int_array
 
@@ -23,10 +23,7 @@ def main() -> None:
         for j in range(len(a[i])):
             if i == j:
                 sum_array_diagonal += a[i][j]
-    print(
-        '\nSum of main diagonal of array:'
-        f'\n-> {sum_array_diagonal}.'
-    )
+    print('\nSum of main diagonal of array:' f'\n-> {sum_array_diagonal}.')
 
 
 if __name__ == '__main__':

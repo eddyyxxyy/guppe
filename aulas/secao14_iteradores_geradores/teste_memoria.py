@@ -36,5 +36,4 @@ def fib_gen(max):
 # Teste 2
 for n in fib_gen(100000):
     print(n)
-
 """

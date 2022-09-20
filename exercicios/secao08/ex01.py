@@ -2,7 +2,7 @@
 1) Crie uma função que recebe como parâmetro um número inteiro e devolve
 o seu dobro.
 """
-from locale import setlocale, LC_ALL
+from locale import LC_ALL, setlocale
 
 
 def double_int(n: int) -> int:

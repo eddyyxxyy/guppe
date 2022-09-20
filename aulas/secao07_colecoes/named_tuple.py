@@ -55,4 +55,3 @@ print(ray.nome)
 print(ray.index('Chow Chow'))
 print(ray.count('Chow Chow'))
 """
-

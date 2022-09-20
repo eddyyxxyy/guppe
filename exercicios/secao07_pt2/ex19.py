@@ -13,15 +13,13 @@ dos trabalhos.
 só existe uma maior nota).
 (d) Imprima a média aritmética das notas finais.
 """
-from locale import setlocale, LC_ALL, atoi, atof
+from locale import LC_ALL, atof, atoi, setlocale
 
 
 def get_int(prompt: str) -> int:
     while True:
         try:
-            value = atoi(
-                input(prompt)
-            )
+            value = atoi(input(prompt))
             if value < 1:
                 raise ValueError
             return value
@@ -32,9 +30,7 @@ def get_int(prompt: str) -> int:
 def get_float(prompt: str) -> float:
     while True:
         try:
-            value = atof(
-                input(prompt)
-            )
+            value = atof(input(prompt))
             if value < 0 or value > 10:
                 raise ValueError
             return value
@@ -51,8 +47,16 @@ def main():
         row = []
         for j in range(1):
             row.append(get_int(f'Enter {i + 1}ª studant id:\n-> '))
-            row.append(get_float(f'Enter {i + 1}ª studant grade average of tests:\n-> '))
-            row.append(get_float(f'Enter {i + 1}ª studant grade average of extra activities:\n-> '))
+            row.append(
+                get_float(
+                    f'Enter {i + 1}ª studant grade average of tests:\n-> '
+                )
+            )
+            row.append(
+                get_float(
+                    f'Enter {i + 1}ª studant grade average of extra activities:\n-> '
+                )
+            )
             row.append(row[1] + row[2])
             arithmetic_average += row[1] + row[2]
             if i == 0:
@@ -65,18 +69,21 @@ def main():
         array.append(row)
     for index, studant in enumerate(array):
         print(
-            f'\n{index + 1}º studant:'
-            '\n-> Id:', studant[0],
-            '\n-> Grade average of tests:', studant[1],
-            '\n-> Grade average of extras:', studant[2],
-            '\n-> Final grade:', studant[3]
+            f'\n{index + 1}º studant:' '\n-> Id:',
+            studant[0],
+            '\n-> Grade average of tests:',
+            studant[1],
+            '\n-> Grade average of extras:',
+            studant[2],
+            '\n-> Final grade:',
+            studant[3],
         )
     print(
         '\n\nBest studant:',
         f'\n-> id: {best_studant[0]}',
         f'\n-> Final grade: {best_studant[1]}.',
         f'\n\nArithmetic average of all studants:',
-        f'\n-> {arithmetic_average / 5:n}.'
+        f'\n-> {arithmetic_average / 5:n}.',
     )
 
 

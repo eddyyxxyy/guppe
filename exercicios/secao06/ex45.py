@@ -5,7 +5,7 @@ conversão e com uma opção para finalizar o programa. O usuário poderá
 fazer quantas conversões desejar, sendo que o programa só será finalizado quando
 a opção de finalizar for escolhida.
 """
-from locale import atoi, atof
+from locale import atof, atoi
 from time import sleep
 
 
@@ -46,12 +46,12 @@ def menu_choice(msg: str = 'Enter a number:\n-> ') -> int:
 
 
 def title_menu(msg: str = 'SPEED CONVERTER') -> str:
-    string_title = '=' * 30 + '\n' + \
-                   msg.center(30, '-') + '\n' + \
-                   '=' * 30 + '\n' \
-                   '1 - Km/h to M/s;' \
-                   '\n2 - M/s to Km/s;' \
-                   '\n3 - Shutdown.'
+    string_title = (
+        '=' * 30 + '\n' + msg.center(30, '-') + '\n' + '=' * 30 + '\n'
+        '1 - Km/h to M/s;'
+        '\n2 - M/s to Km/s;'
+        '\n3 - Shutdown.'
+    )
     return string_title
 
 
@@ -59,10 +59,7 @@ def main():
     while True:
         print(title_menu())
         choice = converter()
-        print(
-            'Speed converted:'
-            f'\n-> {choice}'
-        )
+        print('Speed converted:' f'\n-> {choice}')
         sleep(2)
 
 

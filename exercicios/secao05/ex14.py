@@ -8,13 +8,18 @@ de recuperação (entre 3 e 4.9) ou se foi aprovado. Faça todas as verificaçõ
 """
 from collections import OrderedDict
 
-print('-' * 30 + '\n' + 'Cálculo de Aprovação'.center(30, '-') + '\n' + '-' * 30)
+print(
+    '-' * 30 + '\n' + 'Cálculo de Aprovação'.center(30, '-') + '\n' + '-' * 30
+)
 notas = OrderedDict({'lab': 0, 'semestral': 0, 'final': 0})
 for prova in notas.keys():
     while True:
         try:
-            notas[prova] = (float(input(f'Informe a nota da prova {prova} '
-                                        f'(0 a 10): ').strip().replace(',', '.')))
+            notas[prova] = float(
+                input(f'Informe a nota da prova {prova} ' f'(0 a 10): ')
+                .strip()
+                .replace(',', '.')
+            )
         except ValueError:
             print('Nota inválida!')
         else:
@@ -24,7 +29,9 @@ for prova in notas.keys():
             else:
                 print(f'Nota adicionada com sucesso.')
                 break
-media = (2 * notas['lab'] + 3 * notas['semestral'] + 5 * notas['final']) / (2 + 3 + 5)
+media = (2 * notas['lab'] + 3 * notas['semestral'] + 5 * notas['final']) / (
+    2 + 3 + 5
+)
 print(f'\nA média ponderada corresponde à: {media:.1f} (', end='')
 if 0 < media < 3:
     print('REPROVADO)')

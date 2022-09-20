@@ -5,7 +5,7 @@
     . Os números ímpares digitados;
     . A quantidade de número ímpares digitados;
 """
-from locale import setlocale, LC_ALL
+from locale import LC_ALL, setlocale
 
 from exercicios.secao07_pt1.ex07 import get_ints
 

@@ -92,5 +92,4 @@ print(soma_dez(1, 21))  # 22
 print(comida_favorita('pizza', 'churrasco'))
 
 print(comida_favorita('sanduiche', 'pizza'))
-
 """

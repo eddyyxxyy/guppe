@@ -3,7 +3,7 @@
 Um quadrado perfeito é um número inteiro não negativo que pode ser
 expresso como o quadrado de outro número inteiro. Ex: 1, 4, 9...
 """
-from locale import setlocale, LC_ALL, atoi
+from locale import LC_ALL, atoi, setlocale
 
 from numpy import sqrt
 
@@ -18,9 +18,7 @@ def check_perf_square(x: int) -> bool:
 def get_int():
     while True:
         try:
-            number = atoi(
-                input('Enter an integer:\n-> ')
-            )
+            number = atoi(input('Enter an integer:\n-> '))
             return number
         except ValueError:
             print('\033[31mINVALID! Try again...\033[m\n')

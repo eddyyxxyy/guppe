@@ -10,7 +10,7 @@ Vai gerar um vetor, onde cada posição é a soma das colunas da matriz. A prime
 posição será 5 + 1 + 25, e assim por diante:
    31  4  32
 """
-from locale import setlocale, LC_ALL, atoi
+from locale import LC_ALL, atoi, setlocale
 
 
 def get_int_array(rows: int, columns: int) -> list[list]:
@@ -20,9 +20,7 @@ def get_int_array(rows: int, columns: int) -> list[list]:
         for j in range(columns):
             while True:
                 try:
-                    value = atoi(
-                        input(f'Enter no. for [{i}, {j}]:\n-> ')
-                    )
+                    value = atoi(input(f'Enter no. for [{i}, {j}]:\n-> '))
                     break
                 except ValueError:
                     print('\033[31mINVALID NUMBER! Try again...\033[m\n')
@@ -45,10 +43,7 @@ def main() -> None:
         sum2 += row[1]
         sum3 += row[2]
     one_dimensional_array.append([sum1, sum2, sum3])
-    print(
-        '\nOne dimensional array:'
-        f'\n-> {one_dimensional_array}'
-    )
+    print('\nOne dimensional array:' f'\n-> {one_dimensional_array}')
 
 
 if __name__ == '__main__':

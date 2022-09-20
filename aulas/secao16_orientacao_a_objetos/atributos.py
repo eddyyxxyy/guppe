@@ -204,5 +204,4 @@ del p2.peso
 
 print(p1.__dict__)
 print(p2.__dict__)
-
 """

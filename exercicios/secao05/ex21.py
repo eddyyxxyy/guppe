@@ -21,7 +21,9 @@ print(
 selected_option = 0
 while True:
     try:
-        selected_option = round(float(input('Opção escolhida ->  ').strip().replace(',', '.')))
+        selected_option = round(
+            float(input('Opção escolhida ->  ').strip().replace(',', '.'))
+        )
     except ValueError:
         print('Valor inválido!\n')
         continue
@@ -33,14 +35,22 @@ while True:
             break
 while selected_option == 1:
     try:
-        n1 = float(input('Informe o primeiro número da soma: ').strip().replace(',', '.'))
+        n1 = float(
+            input('Informe o primeiro número da soma: ')
+            .strip()
+            .replace(',', '.')
+        )
     except ValueError:
         print('Valor inválido!\n')
         continue
     else:
         while True:
             try:
-                n2 = float(input('Informe o segundo número da soma: ').strip().replace(',', '.'))
+                n2 = float(
+                    input('Informe o segundo número da soma: ')
+                    .strip()
+                    .replace(',', '.')
+                )
             except ValueError:
                 print('Valor inválido!\n')
                 continue
@@ -51,16 +61,28 @@ while selected_option == 1:
     break
 while selected_option == 2:
     try:
-        n1 = float(input('Informe o primeiro número da diferença do '
-                         'maior pelo menor: ').strip().replace(',', '.'))
+        n1 = float(
+            input(
+                'Informe o primeiro número da diferença do '
+                'maior pelo menor: '
+            )
+            .strip()
+            .replace(',', '.')
+        )
     except ValueError:
         print('Valor inválido!\n')
         continue
     else:
         while True:
             try:
-                n2 = float(input('Informe o segundo número da diferença do '
-                                 'maior pelo menor: ').strip().replace(',', '.'))
+                n2 = float(
+                    input(
+                        'Informe o segundo número da diferença do '
+                        'maior pelo menor: '
+                    )
+                    .strip()
+                    .replace(',', '.')
+                )
             except ValueError:
                 print('Valor inválido!\n')
                 continue
@@ -75,14 +97,22 @@ while selected_option == 2:
     break
 while selected_option == 3:
     try:
-        n1 = float(input('Informe o primeiro número da multiplicação: ').strip().replace(',', '.'))
+        n1 = float(
+            input('Informe o primeiro número da multiplicação: ')
+            .strip()
+            .replace(',', '.')
+        )
     except ValueError:
         print('Valor inválido!\n')
         continue
     else:
         while True:
             try:
-                n2 = float(input('Informe o segundo número da multiplicação: ').strip().replace(',', '.'))
+                n2 = float(
+                    input('Informe o segundo número da multiplicação: ')
+                    .strip()
+                    .replace(',', '.')
+                )
             except ValueError:
                 print('Valor inválido!\n')
                 continue
@@ -93,7 +123,11 @@ while selected_option == 3:
     break
 while selected_option == 4:
     try:
-        n1 = float(input('Informe o número à ser dividido: ').strip().replace(',', '.'))
+        n1 = float(
+            input('Informe o número à ser dividido: ')
+            .strip()
+            .replace(',', '.')
+        )
     except ValueError:
         print('Valor inválido!\n')
         continue
@@ -103,7 +137,9 @@ while selected_option == 4:
             continue
         while True:
             try:
-                n2 = float(input('Informe o divisor: ').strip().replace(',', '.'))
+                n2 = float(
+                    input('Informe o divisor: ').strip().replace(',', '.')
+                )
             except ValueError:
                 print('Valor inválido!\n')
                 continue

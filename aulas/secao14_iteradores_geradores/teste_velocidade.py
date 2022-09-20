@@ -26,7 +26,6 @@ print(ge2)  # Generator Expression
 print(next(ge2))  # 1
 print(next(ge2))  # 2
 print(next(ge2))  # 3
-
 """
 
 # Realizando o teste de velocidade

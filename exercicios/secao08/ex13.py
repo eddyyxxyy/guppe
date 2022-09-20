@@ -4,7 +4,7 @@ Este símbolo representará a operação que se deseja efetuar com os
 números. Se o símbolo for + deverá ser realizada uma adição, se for -
 uma subtração, se for / uma divisão e se for * será efetuada uma multiplicação.
 """
-from locale import atof, setlocale, LC_ALL
+from locale import LC_ALL, atof, setlocale
 
 
 def calc(a, b, symbol='+') -> float:
@@ -21,9 +21,7 @@ def calc(a, b, symbol='+') -> float:
 def get_number(name: str) -> float:
     while True:
         try:
-            value = atof(
-                input(f'Enter no. for "{name}":\n-> ')
-            )
+            value = atof(input(f'Enter no. for "{name}":\n-> '))
             return value
         except ValueError:
             print('\033[31mINVALID! Try again...\033[m\n')
@@ -51,10 +49,7 @@ def main() -> None:
     b = get_number('B')
     op = get_op()
     result = calc(a, b, op)
-    print(
-        '\nOperation:'
-        f'\n{a:n} {op} {b:n} = {result:n}'
-    )
+    print('\nOperation:' f'\n{a:n} {op} {b:n} = {result:n}')
 
 
 if __name__ == '__main__':

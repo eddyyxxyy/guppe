@@ -114,8 +114,6 @@ print(incrementa())
 
 
 Podemos ter funções que são declaradas dentro de funções, que também tem uma forma especial de escopo de variável
-
-
 """
 
 
@@ -126,4 +124,5 @@ def fora():
         nonlocal contador
         contador += 1
         return contador
+
     return dentro()

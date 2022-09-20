@@ -2,8 +2,8 @@
 10) Faça um programa que calcule e mostre a soma dos 50
 primeiros números pares.
 """
-from locale import format_string, atoi
 from collections.abc import Iterator
+from locale import atoi, format_string
 
 
 def sum_n_even_numbers(n: int) -> Iterator[int]:
@@ -14,14 +14,14 @@ def sum_n_even_numbers(n: int) -> Iterator[int]:
 def main():
     while True:
         try:
-            times: int = atoi(input('How many even numbers you want to sum?\n-> '))
+            times: int = atoi(
+                input('How many even numbers you want to sum?\n-> ')
+            )
             break
         except ValueError:
             print('Invalid input! Try again...')
     numbers = tuple(sum_n_even_numbers(times))
-    formatted_numbers = ", ".join(
-        format_string("%d", x) for x in numbers
-    )
+    formatted_numbers = ', '.join(format_string('%d', x) for x in numbers)
     print(
         'Numbers'
         f'\n-> {formatted_numbers}'

@@ -19,27 +19,46 @@ def trapezio(a: float, b: float, c: float) -> float:
 area_trapezio = 0
 while True:
     try:
-        bmaior: float = float(input('Informe o comprimento da base maior: ').strip().replace(',', '.'))
+        bmaior: float = float(
+            input('Informe o comprimento da base maior: ')
+            .strip()
+            .replace(',', '.')
+        )
         if bmaior <= 0:
-            print('O comprimento de deve ser maior que 0.\n'
-                  '\n¡OPERAÇÃO SENDO REINICIADA!\n')
+            print(
+                'O comprimento de deve ser maior que 0.\n'
+                '\n¡OPERAÇÃO SENDO REINICIADA!\n'
+            )
             continue
-        bmenor: float = float(input('Informe o comprimento da base menor: ').strip().replace(',', '.'))
+        bmenor: float = float(
+            input('Informe o comprimento da base menor: ')
+            .strip()
+            .replace(',', '.')
+        )
         if bmenor <= 0:
-            print('O comprimento de deve ser maior que 0.\n'
-                  '\n¡OPERAÇÃO SENDO REINICIADA!\n')
+            print(
+                'O comprimento de deve ser maior que 0.\n'
+                '\n¡OPERAÇÃO SENDO REINICIADA!\n'
+            )
             continue
         if bmaior <= bmenor:
-            print('O comprimento da base maior DEVE ser maior que a base menor.\n'
-                  '\n¡OPERAÇÃO SENDO REINICIADA!\n')
+            print(
+                'O comprimento da base maior DEVE ser maior que a base menor.\n'
+                '\n¡OPERAÇÃO SENDO REINICIADA!\n'
+            )
             continue
-        altura: float = float(input('Informe o comprimento da altura: ').strip().replace(',', '.'))
+        altura: float = float(
+            input('Informe o comprimento da altura: ')
+            .strip()
+            .replace(',', '.')
+        )
         if altura <= 0:
-            print('O comprimento de deve ser maior que 0.\n'
-                  '\n¡OPERAÇÃO SENDO REINICIADA!\n')
+            print(
+                'O comprimento de deve ser maior que 0.\n'
+                '\n¡OPERAÇÃO SENDO REINICIADA!\n'
+            )
     except ValueError:
-        print('Valor inválido!\n'
-              '\n¡OPERAÇÃO SENDO REINICIADA!\n')
+        print('Valor inválido!\n' '\n¡OPERAÇÃO SENDO REINICIADA!\n')
         continue
     else:
         area_trapezio = trapezio(bmaior, bmenor, altura)

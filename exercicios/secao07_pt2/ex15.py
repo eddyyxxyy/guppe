@@ -13,14 +13,20 @@ def main() -> None:
 
     cont = 0
     while len(gabarito) < 10:
-        resposta = str(input(f"Digite a alternativa correta da questão {cont + 1}: "))
+        resposta = str(
+            input(f'Digite a alternativa correta da questão {cont + 1}: ')
+        )
 
-        if (resposta.lower() == 'a') or (resposta.lower() == 'b') or (resposta.lower() == 'c') or (
-                resposta.lower() == 'd'):
+        if (
+            (resposta.lower() == 'a')
+            or (resposta.lower() == 'b')
+            or (resposta.lower() == 'c')
+            or (resposta.lower() == 'd')
+        ):
             gabarito.append(resposta)
 
         else:
-            print("Alternativa inválida")
+            print('Alternativa inválida')
             cont -= 1
 
         cont += 1
@@ -33,10 +39,18 @@ def main() -> None:
         respostas = []
         for j in range(10):
 
-            resposta = str(input(f"Digite a alternativa da questão {j + 1} do {i + 1} aluno: "))
+            resposta = str(
+                input(
+                    f'Digite a alternativa da questão {j + 1} do {i + 1} aluno: '
+                )
+            )
 
-            if (resposta.lower() == 'a') or (resposta.lower() == 'b') or (resposta.lower() == 'c') or \
-                    (resposta.lower() == 'd'):
+            if (
+                (resposta.lower() == 'a')
+                or (resposta.lower() == 'b')
+                or (resposta.lower() == 'c')
+                or (resposta.lower() == 'd')
+            ):
 
                 respostas.append(resposta)
 
@@ -59,7 +73,7 @@ def main() -> None:
         resultado[f'aluno {i + 1}'] = corretos
 
     for aluno, resultado in resultado.items():
-        print(f"O {aluno} teve {resultado} acertos")
+        print(f'O {aluno} teve {resultado} acertos')
 
 
 if __name__ == '__main__':

@@ -2,7 +2,7 @@
 13) Fazer um programa ler 5 valores e, em seguida, mostrar a posição onde
 se encotram o maior e o menor valor.
 """
-from locale import setlocale, LC_ALL, format_string
+from locale import LC_ALL, format_string, setlocale
 
 from ex12 import get_values
 
@@ -14,8 +14,7 @@ def main():
         format_string('%.1f', x, grouping=True) for x in numbers
     )
     print(
-        '-' * 30 +
-        '\nNumbers:'
+        '-' * 30 + '\nNumbers:'
         f'\n-> {formatted_numbers}.'
         '\nMax:'
         f'\n-> {max(numbers):n} -> in position {numbers.index(max(numbers))}'

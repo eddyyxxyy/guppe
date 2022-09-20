@@ -8,7 +8,9 @@ uma das seguintes categorias:
      Juvenil B   | 14 a 17
      Sênior      | maiores de 18 anos
 """
-print('=' * 30 + '\n' + 'CATEGORIA DO NADADOR'.center(30, '-') + '\n' + '=' * 30)
+print(
+    '=' * 30 + '\n' + 'CATEGORIA DO NADADOR'.center(30, '-') + '\n' + '=' * 30
+)
 age: int = 0
 keep: str = ''
 while True:
@@ -22,7 +24,9 @@ while True:
             print('\nIdade inválida! Tente novamente...\n')
             continue
         elif age < 5:
-            print(f'O nadador terá de esperar {5 - age} anos para ingressar no clube de nadadores.')
+            print(
+                f'O nadador terá de esperar {5 - age} anos para ingressar no clube de nadadores.'
+            )
             break
         else:
             if 5 <= age <= 7:
@@ -37,8 +41,14 @@ while True:
                 print(f'O nadador de {age} anos está na categoria Sênior.')
         while True:
             try:
-                keep = input('\nDeseja ver verificar a classificação de '
-                             'outro nadador? \033[37mSim/Não\033[m ').strip().upper()[0]
+                keep = (
+                    input(
+                        '\nDeseja ver verificar a classificação de '
+                        'outro nadador? \033[37mSim/Não\033[m '
+                    )
+                    .strip()
+                    .upper()[0]
+                )
             except IndexError:
                 print('\nResposta inválida! Responda com S ou N...\n')
                 continue
