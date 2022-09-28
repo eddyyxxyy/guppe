@@ -5,7 +5,7 @@ e retorne a soma dos elementos que estão na diagonal secundária.
 from random import sample
 
 
-def sum_main_diag(array: list):
+def sum_secondary_diag(array: list):
     result = 0
     for row in range(len(array)):
         for column in range(len(array)):
@@ -24,7 +24,7 @@ def main() -> None:
         f'{array[0]}'
         f'\n{array[1]}'
         f'\n{array[2]}'
-        f'\n{sum_main_diag(array)}'
+        f'\n{sum_secondary_diag(array)}'
     )
 
 
