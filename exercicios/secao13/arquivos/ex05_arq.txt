@@ -1,0 +1,3 @@
+Eu sou um arquivo com algumas linhas,
+isso mesmo, eu tenho diversas linhas.
+Haha, muitas linhas...
