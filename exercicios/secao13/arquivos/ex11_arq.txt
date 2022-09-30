@@ -1,0 +1,2 @@
+Este arquivo vai ser lido no exercício 11, exercício este que vai informar a quantidade de vezes que a palavra
+"arquivo" esta presente nesse arquivo.
