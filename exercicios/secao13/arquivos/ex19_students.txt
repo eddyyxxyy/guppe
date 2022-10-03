@@ -1,0 +1,9 @@
+NAME:Edson GRADE:8.9
+NAME:Oliver GRADE:7.5
+NAME:Roberto GRADE:9.5
+NAME:Jorge GRADE:6.5
+NAME:Silvana GRADE:4.0
+NAME:Helena GRADE:8.6
+NAME:Isa GRADE:10.0
+NAME:Arquimedes GRADE:7
+NAME:Francis GRADE:8
