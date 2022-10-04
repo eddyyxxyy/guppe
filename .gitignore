@@ -108,3 +108,4 @@ cython_debug/
 /.idea/inspectionProfiles/Project_Default.xml
 /.idea/projeto.iml
 /.idea/vcs.xml
+.idea
