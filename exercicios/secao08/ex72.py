@@ -27,11 +27,11 @@ def soma(args1, args2):
     elementos = True
 
     for i in args1:
-        if not(type(i) == int or type(i) == float):
+        if not (type(i) == int or type(i) == float):
             elementos = False
 
     for i in args2:
-        if not(type(i) == int or type(i) == float):
+        if not (type(i) == int or type(i) == float):
             elementos = False
 
     if elementos:
@@ -58,7 +58,7 @@ def main() -> None:
     vetor1 = [3, 344, 43, 32, 35, 343, 7, 65, 65]
     vetor2 = [32, 54, 32, 3, 3435]
 
-    print(f"Soma dos vetores: {soma(vetor1, vetor2)}")
+    print(f'Soma dos vetores: {soma(vetor1, vetor2)}')
 
 
 if __name__ == '__main__':

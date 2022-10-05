@@ -8,7 +8,7 @@ import sys
 
 
 def routine():
-    string = ""
+    string = ''
     while True:
         c = sys.stdin.read(1)  # reads one byte at a time, similar to getchar()
         if c == ' ':

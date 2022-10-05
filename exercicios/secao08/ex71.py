@@ -35,15 +35,33 @@ def dentro_ret(x1, y1, x2, y2, p1, p2):
 
 
 def main() -> None:
-    coordenada_x1 = int(input("Local da coordenada x do vértice inferior esquerdo do retângulo: "))
-    coordenada_y1 = int(input("Local da coordenada y do vértice inferior esquerdo do retângulo: "))
-    coordenada_x2 = int(input("\nLocal da coordenada x do vértice superior direita do retângulo: "))
-    coordenada_y2 = int(input("Local da coordenada y do vértice superior direita do retângulo: "))
+    coordenada_x1 = int(
+        input(
+            'Local da coordenada x do vértice inferior esquerdo do retângulo: '
+        )
+    )
+    coordenada_y1 = int(
+        input(
+            'Local da coordenada y do vértice inferior esquerdo do retângulo: '
+        )
+    )
+    coordenada_x2 = int(
+        input(
+            '\nLocal da coordenada x do vértice superior direita do retângulo: '
+        )
+    )
+    coordenada_y2 = int(
+        input(
+            'Local da coordenada y do vértice superior direita do retângulo: '
+        )
+    )
 
-    coordenada_p1 = int(input("\nLocal da coordenada x do ponto: "))
-    coordenada_p2 = int(input("Local da coordenada y do ponto: "))
+    coordenada_p1 = int(input('\nLocal da coordenada x do ponto: '))
+    coordenada_p2 = int(input('Local da coordenada y do ponto: '))
 
-    print(f"\n{dentro_ret(coordenada_x1, coordenada_y1, coordenada_x2, coordenada_y2, coordenada_p1, coordenada_p2)}")
+    print(
+        f'\n{dentro_ret(coordenada_x1, coordenada_y1, coordenada_x2, coordenada_y2, coordenada_p1, coordenada_p2)}'
+    )
 
 
 if __name__ == '__main__':

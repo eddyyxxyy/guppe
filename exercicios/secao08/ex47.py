@@ -20,10 +20,7 @@ def main() -> None:
         sample(range(1, 21), 4),
         sample(range(1, 21), 4),
     ]
-    print(
-        f'{array}'
-        f'\n{array_values_larger_10(array)}'
-    )
+    print(f'{array}' f'\n{array_values_larger_10(array)}')
 
 
 if __name__ == '__main__':

@@ -8,8 +8,9 @@ seguida pelo seu número de habitantes.
 
 
 def main() -> None:
-    with open('arquivos/ex10_arq0.txt') as f, \
-            open('arquivos/ex10_new_arq.txt', 'w') as f1:
+    with open('arquivos/ex10_arq0.txt') as f, open(
+        'arquivos/ex10_new_arq.txt', 'w'
+    ) as f1:
         rows = f.readlines()
         populated = max(rows, key=lambda population: int(population[40::]))
         f1.write(populated)

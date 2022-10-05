@@ -8,7 +8,12 @@ from random import sample
 
 
 def standard_deviation(array: list):
-    return sqrt(sum(((value - sum(array) / len(array)) ** 2) / len(array) for value in array))
+    return sqrt(
+        sum(
+            ((value - sum(array) / len(array)) ** 2) / len(array)
+            for value in array
+        )
+    )
 
 
 def main() -> None:

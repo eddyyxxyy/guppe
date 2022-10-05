@@ -26,24 +26,38 @@ def ler_dados():
         informacoes = []
 
         sexo = ''
-        while not(sexo == "masculino" or sexo == "feminino"):
-            sexo = str(input(f"Sexo do habitante {i+1} (masculino / feminino): "))
+        while not (sexo == 'masculino' or sexo == 'feminino'):
+            sexo = str(
+                input(f'Sexo do habitante {i+1} (masculino / feminino): ')
+            )
             sexo = sexo.lower()
         informacoes.append(sexo)
 
         cor_olhos = ''
-        while not(cor_olhos == "azuis" or cor_olhos == "castanhos"):
-            cor_olhos = str(input(f"Cor dos olhos do habitante {i+1} (azuis / castanhos): "))
+        while not (cor_olhos == 'azuis' or cor_olhos == 'castanhos'):
+            cor_olhos = str(
+                input(
+                    f'Cor dos olhos do habitante {i+1} (azuis / castanhos): '
+                )
+            )
             cor_olhos = cor_olhos.lower()
         informacoes.append(cor_olhos.lower())
 
         cor_cabelos = ''
-        while not(cor_cabelos == "louro" or cor_cabelos == "preto" or cor_cabelos == "castanho"):
-            cor_cabelos = str(input(f"Cor do cabelo do habitante {i+1} (Louro / Preto / Castanho): "))
+        while not (
+            cor_cabelos == 'louro'
+            or cor_cabelos == 'preto'
+            or cor_cabelos == 'castanho'
+        ):
+            cor_cabelos = str(
+                input(
+                    f'Cor do cabelo do habitante {i+1} (Louro / Preto / Castanho): '
+                )
+            )
             cor_cabelos = cor_cabelos.lower()
         informacoes.append(cor_cabelos)
 
-        idade = int(input(f"Idade do habitante {i+1}: "))
+        idade = int(input(f'Idade do habitante {i+1}: '))
         informacoes.append(idade)
 
         print()
@@ -83,10 +97,12 @@ def media(args):
                     soma_idade += args[i][3]
                     qtd += 1
 
-        print(f"Média de idade das pessoas com olhos castanhos e cabelos pretos: {int(soma_idade / qtd)}")
+        print(
+            f'Média de idade das pessoas com olhos castanhos e cabelos pretos: {int(soma_idade / qtd)}'
+        )
 
     else:
-        print("Dados inválidos")
+        print('Dados inválidos')
 
 
 def maior_idade(args):
@@ -146,7 +162,11 @@ def qtd_individuos(args):
         for i in range(5):
 
             if args[i][0] == 'feminino' and args[i][1] == 'azuis':
-                if (args[i][2] == 'louro') and (args[i][3] >= 18) and (args[i][3] <= 35):
+                if (
+                    (args[i][2] == 'louro')
+                    and (args[i][3] >= 18)
+                    and (args[i][3] <= 35)
+                ):
                     quantidade += 1
 
         return quantidade
@@ -155,9 +175,11 @@ def qtd_individuos(args):
 def main() -> None:
     dados = ler_dados()
     media(dados)
-    print(f"A maior idade entre os habitantes: {maior_idade(dados)}")
-    print(f"Quantidade de indivíduos do sexo feminino cuja idade está entre 18 e 35 (inclusive) "
-          f"e que tenham olhos azuis e cabelos louros: {qtd_individuos(dados)}")
+    print(f'A maior idade entre os habitantes: {maior_idade(dados)}')
+    print(
+        f'Quantidade de indivíduos do sexo feminino cuja idade está entre 18 e 35 (inclusive) '
+        f'e que tenham olhos azuis e cabelos louros: {qtd_individuos(dados)}'
+    )
 
 
 if __name__ == '__main__':

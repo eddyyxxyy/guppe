@@ -7,11 +7,13 @@ texto contendo o texto do arquivo de entrada, mas com as vogais substituídas po
 def replace_vowels(path: str):
     with open(path, 'r', encoding='UTF-8') as f:
         result = f.read()
-        result = result.replace('a', '*') \
-            .replace('e', '*') \
-            .replace('i', '*') \
-            .replace('o', '*') \
+        result = (
+            result.replace('a', '*')
+            .replace('e', '*')
+            .replace('i', '*')
+            .replace('o', '*')
             .replace('u', '*')
+        )
     with open('arquivos/ex07_arq2.txt', 'w+', encoding='UTF-8') as f:
         f.write(result)
 

@@ -17,7 +17,6 @@ de x por y;
 """
 
 
-
 def reduz(a, b):
     """
     Função que recebe dois inteiros e retorna o racional que represeta a / b
@@ -91,15 +90,15 @@ def div(x, y):
 
 
 def main() -> None:
-    num1 = int(input("Digite um número: "))
-    num2 = int(input("Digite um número: "))
+    num1 = int(input('Digite um número: '))
+    num2 = int(input('Digite um número: '))
 
-    print(f"\nRacional de {num1} / {num2}: {reduz(num1, num2)}")
-    print(f"Número {num1} negativo: {neg(num1)}")
-    print(f"Número {num2} negativo: {neg(num2)}")
-    print(f"Soma de {num1} por {num2}: {soma(num1, num2)}")
-    print(f"Produto de {num1} por {num2}: {mult(num1, num2)}")
-    print(f"Quociente de {num1} por {num2}: {div(num1, num2)}")
+    print(f'\nRacional de {num1} / {num2}: {reduz(num1, num2)}')
+    print(f'Número {num1} negativo: {neg(num1)}')
+    print(f'Número {num2} negativo: {neg(num2)}')
+    print(f'Soma de {num1} por {num2}: {soma(num1, num2)}')
+    print(f'Produto de {num1} por {num2}: {mult(num1, num2)}')
+    print(f'Quociente de {num1} por {num2}: {div(num1, num2)}')
 
 
 if __name__ == '__main__':

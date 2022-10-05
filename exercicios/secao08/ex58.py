@@ -19,13 +19,13 @@ def main() -> None:
         sample(range(1, 11), 4),
         sample(range(1, 11), 4),
         sample(range(1, 11), 4),
-        sample(range(1, 11), 4)
+        sample(range(1, 11), 4),
     ]
     array_b = [
         sample(range(1, 11), 4),
         sample(range(1, 11), 4),
         sample(range(1, 11), 4),
-        sample(range(1, 11), 4)
+        sample(range(1, 11), 4),
     ]
     print('Array "A":')
     for row in array_a:

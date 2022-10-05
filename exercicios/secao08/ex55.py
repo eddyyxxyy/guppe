@@ -14,7 +14,7 @@ def sum_diags(array: list):
             if (row + column) == (len(array) - 1):
                 result += array[row][column]
 
-    return result - array[len(array)//2][len(array)//2]
+    return result - array[len(array) // 2][len(array) // 2]
 
 
 def main() -> None:
@@ -24,10 +24,7 @@ def main() -> None:
         sample(range(1, 11), 3),
     ]
     print(
-        f'{array[0]}'
-        f'\n{array[1]}'
-        f'\n{array[2]}'
-        f'\n{sum_diags(array)}'
+        f'{array[0]}' f'\n{array[1]}' f'\n{array[2]}' f'\n{sum_diags(array)}'
     )
 
 

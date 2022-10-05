@@ -19,9 +19,7 @@ def max_array(*args) -> int:
 def main() -> None:
     array = []
     for i in range(10):
-        array.append(
-            get_int(f'Enter integer for position {i + 1}: ')
-        )
+        array.append(get_int(f'Enter integer for position {i + 1}: '))
     print(
         '\nArray:'
         f'\n-> {array}'

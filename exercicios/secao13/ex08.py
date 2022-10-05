@@ -7,24 +7,30 @@ que converte maiúscula para minúscula é o toupper(). Ela é aplicada em cada 
 
 
 def main() -> None:
-    file_name = str(input(
-        "Digite o caminho do arquivo ou seu nome "
-        "(caso o arquivo esteja no mesmo local que o programa): "
-    ))
+    file_name = str(
+        input(
+            'Digite o caminho do arquivo ou seu nome '
+            '(caso o arquivo esteja no mesmo local que o programa): '
+        )
+    )
 
     try:
-        with open(file_name, "r", encoding="utf-8") as arquivo:
+        with open(file_name, 'r', encoding='utf-8') as arquivo:
 
-            with open("arquivos/ex08_arq2.txt", "w", encoding="utf-8") as arquivo_novo:
+            with open(
+                'arquivos/ex08_arq2.txt', 'w', encoding='utf-8'
+            ) as arquivo_novo:
                 arquivo_novo.write(arquivo.read().upper())
 
-        print("\nInformações inseridas no arquivo com sucesso!")
+        print('\nInformações inseridas no arquivo com sucesso!')
 
     except FileNotFoundError:
-        print("\nO arquivo informado não foi encontrado ou o programa não tem permissão para criar um diretório/pasta!")
+        print(
+            '\nO arquivo informado não foi encontrado ou o programa não tem permissão para criar um diretório/pasta!'
+        )
 
     except OSError:
-        print("\nO SO não aceita caracteres especiais em nomes de arquivo!")
+        print('\nO SO não aceita caracteres especiais em nomes de arquivo!')
 
 
 if __name__ == '__main__':

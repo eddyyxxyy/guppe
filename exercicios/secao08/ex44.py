@@ -20,11 +20,7 @@ def even_odd_arrays(x: list, a=None, b=None) -> tuple[list, list]:
 def main() -> None:
     array = sample(range(0, 100), 30)
     arrays_a_b = even_odd_arrays(array)
-    print(
-        f'{array}'
-        f'\n{arrays_a_b[0]}'
-        f'\n{arrays_a_b[1]}'
-    )
+    print(f'{array}' f'\n{arrays_a_b[0]}' f'\n{arrays_a_b[1]}')
 
 
 if __name__ == '__main__':

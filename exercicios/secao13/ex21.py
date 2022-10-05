@@ -11,15 +11,46 @@ def verificar_nome(nome):
     """Função que recebe um nome e verifica se o mesmo é válido ou não.
     Caso o nome seja válido retorna True, caso contrário retorna False"""
 
-    caracteres_invalidos = ["-", ":", "?", "/", ">", "<", "}", "{", "[", "]",
-                            "+", "*", "@", "!", "%", "¨", ";", "´", "`", "^", "~",
-                            "=", "(", ")", "&", "_", "$", "#", ","]
+    caracteres_invalidos = [
+        '-',
+        ':',
+        '?',
+        '/',
+        '>',
+        '<',
+        '}',
+        '{',
+        '[',
+        ']',
+        '+',
+        '*',
+        '@',
+        '!',
+        '%',
+        '¨',
+        ';',
+        '´',
+        '`',
+        '^',
+        '~',
+        '=',
+        '(',
+        ')',
+        '&',
+        '_',
+        '$',
+        '#',
+        ',',
+    ]
 
     try:
 
         for caractere in nome:
 
-            if str(caractere).isnumeric() or str(caractere) in caracteres_invalidos:
+            if (
+                str(caractere).isnumeric()
+                or str(caractere) in caracteres_invalidos
+            ):
                 return False
 
         return True
@@ -37,7 +68,7 @@ def verificar_nome(nome):
 def main() -> None:
     try:
 
-        qtd_alunos = int(input("Digite a quantidade de alunos: "))
+        qtd_alunos = int(input('Digite a quantidade de alunos: '))
 
         nome_alunos = []
         nota_alunos = []
@@ -46,13 +77,23 @@ def main() -> None:
 
             while True:
 
-                nome = str(input(f"\nDigite o nome do aluno {i + 1}: ")).strip().title()
+                nome = (
+                    str(input(f'\nDigite o nome do aluno {i + 1}: '))
+                    .strip()
+                    .title()
+                )
 
                 if verificar_nome(nome):
 
-                    novo_nome = nome[0:40:1] if len(nome) >= 40 else nome + " " * (40 - len(nome))
+                    novo_nome = (
+                        nome[0:40:1]
+                        if len(nome) >= 40
+                        else nome + ' ' * (40 - len(nome))
+                    )
 
-                    nota = abs(float(input(f"Digite a nota do aluno {nome}: ")))
+                    nota = abs(
+                        float(input(f'Digite a nota do aluno {nome}: '))
+                    )
 
                     nome_alunos.append(novo_nome)
                     nota_alunos.append(nota)
@@ -60,36 +101,38 @@ def main() -> None:
                     break
 
                 else:
-                    print("\nNome inválido!")
+                    print('\nNome inválido!')
 
-        with open("arquivos/ex21_alunos_notas.bin", "ab") as arquivo:
+        with open('arquivos/ex21_alunos_notas.bin', 'ab') as arquivo:
 
             for i in range(qtd_alunos):
-                linha = f"{nome_alunos[i]} {nota_alunos[i]}\n".encode("utf8")
+                linha = f'{nome_alunos[i]} {nota_alunos[i]}\n'.encode('utf8')
 
                 arquivo.write(linha)
 
-        print("\nInformações inseridas no arquivo com sucesso!")
+        print('\nInformações inseridas no arquivo com sucesso!')
 
-        with open("arquivos/ex21_alunos_notas.bin", "rb") as ler_arquivo:
+        with open('arquivos/ex21_alunos_notas.bin', 'rb') as ler_arquivo:
 
-            linhas = ler_arquivo.read().decode("utf8").splitlines()
+            linhas = ler_arquivo.read().decode('utf8').splitlines()
 
             aluno = max(linhas, key=lambda dado: float(dado[41::]))
 
-            print(f"\nO aluno com a maior nota é o {aluno[0:40:1]}")
+            print(f'\nO aluno com a maior nota é o {aluno[0:40:1]}')
 
     except FileNotFoundError:
-        print("\nO arquivo informado não foi encontrado ou o programa não tem permissão para criar um diretório/pasta!")
+        print(
+            '\nO arquivo informado não foi encontrado ou o programa não tem permissão para criar um diretório/pasta!'
+        )
 
     except OSError:
-        print("\nO SO não aceita caracteres especiais em nomes de arquivo!")
+        print('\nO SO não aceita caracteres especiais em nomes de arquivo!')
 
     except IndexError:
-        print("\nO modo que as informações se encontram no texto é inválido!")
+        print('\nO modo que as informações se encontram no texto é inválido!')
 
     except ValueError:
-        print("\nO valor fornecido é inválido!")
+        print('\nO valor fornecido é inválido!')
 
 
 if __name__ == '__main__':

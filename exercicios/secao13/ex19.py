@@ -13,7 +13,10 @@ def main() -> None:
             students.append(student.split())
         for student in range(len(students)):
             if float(students[student][-1].split(':')[-1]) > float(result[1]):
-                result = [students[student][0].split(":")[-1], students[student][-1].split(':')[-1]]
+                result = [
+                    students[student][0].split(':')[-1],
+                    students[student][-1].split(':')[-1],
+                ]
         print(f'Student: {result[0]} | Grade: {result[1]}')
 
 

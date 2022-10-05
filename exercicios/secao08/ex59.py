@@ -13,18 +13,22 @@ def union_matrix(a, b):
 
 
 def main() -> None:
-    array_a = numpy.array([
-        sample(range(1, 11), 4),
-        sample(range(1, 11), 4),
-        sample(range(1, 11), 4),
-        sample(range(1, 11), 4)
-    ])
-    array_b = numpy.array([
-        sample(range(1, 11), 4),
-        sample(range(1, 11), 4),
-        sample(range(1, 11), 4),
-        sample(range(1, 11), 4)
-    ])
+    array_a = numpy.array(
+        [
+            sample(range(1, 11), 4),
+            sample(range(1, 11), 4),
+            sample(range(1, 11), 4),
+            sample(range(1, 11), 4),
+        ]
+    )
+    array_b = numpy.array(
+        [
+            sample(range(1, 11), 4),
+            sample(range(1, 11), 4),
+            sample(range(1, 11), 4),
+            sample(range(1, 11), 4),
+        ]
+    )
     print(f'Array "A":\n {array_a}')
     print(f'\nArray "B":\n {array_a}')
     array_c = union_matrix(array_a, array_b)

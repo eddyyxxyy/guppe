@@ -26,8 +26,12 @@ def main() -> None:
         for row in range(int(line0[0])):
             array.append([])
             for column in range(int(line0[1])):
-                if row == int(line1[0]) and column == int(line1[1]) or \
-                        row == int(line2[0]) and column == int(line2[1]):
+                if (
+                    row == int(line1[0])
+                    and column == int(line1[1])
+                    or row == int(line2[0])
+                    and column == int(line2[1])
+                ):
                     array[row].append(0)
                 else:
                     array[row].append(1)

@@ -15,11 +15,11 @@ def cria_fracao():
     :return: Retorna duas funções 'p' e 'q', compostas por numerador e denominador
     """
 
-    numerador1 = int(input("Digite o numerador da primeira fração: "))
-    denominador1 = int(input("Digite o denominador da primeira fração: "))
+    numerador1 = int(input('Digite o numerador da primeira fração: '))
+    denominador1 = int(input('Digite o denominador da primeira fração: '))
 
-    numerador2 = int(input("\nDigite o numerador da segunda fração: "))
-    denominador2 = int(input("Digite o denominador da segunda fração: "))
+    numerador2 = int(input('\nDigite o numerador da segunda fração: '))
+    denominador2 = int(input('Digite o denominador da segunda fração: '))
     print()
 
     return numerador1, denominador1, numerador2, denominador2
@@ -36,15 +36,19 @@ def simplifica_fracao(numerador1, denominador1):
     if denominador1 > 0:
         for i in range(denominador1, 0, -1):
             if numerador1 % i == 0 and denominador1 % i == 0:
-                print(f"Fração {numerador1} / {denominador1} simplificada: "
-                      f"{int(numerador1 / i)} / {int(denominador1 / i)}")
+                print(
+                    f'Fração {numerador1} / {denominador1} simplificada: '
+                    f'{int(numerador1 / i)} / {int(denominador1 / i)}'
+                )
                 break
 
     elif denominador1 < 0:
         for i in range(denominador1, 0, 1):
             if numerador1 % i == 0 and denominador1 % i == 0:
-                print(f"Fração {numerador1} / {denominador1} simplificada: "
-                      f"{int(numerador1 / i)} / {int(denominador1 / i)}")
+                print(
+                    f'Fração {numerador1} / {denominador1} simplificada: '
+                    f'{int(numerador1 / i)} / {int(denominador1 / i)}'
+                )
                 break
 
 
@@ -63,12 +67,16 @@ def calculo_fracoes(numerador1, denominador1, numerador2, denominador2):
         novo_numerador = numerador1 + numerador2
         novo_denominador = denominador1
 
-        print(f"\nA soma das duas frações: {novo_numerador} / {novo_denominador}")
+        print(
+            f'\nA soma das duas frações: {novo_numerador} / {novo_denominador}'
+        )
         simplifica_fracao(novo_numerador, novo_denominador)
 
         novo_numerador = numerador1 - numerador2
         novo_denominador = denominador1
-        print(f"\nA subtração das duas frações: {novo_numerador} / {novo_denominador}")
+        print(
+            f'\nA subtração das duas frações: {novo_numerador} / {novo_denominador}'
+        )
         simplifica_fracao(novo_numerador, novo_denominador)
 
     elif denominador1 != denominador2:
@@ -107,21 +115,25 @@ def calculo_fracoes(numerador1, denominador1, numerador2, denominador2):
 
         novo_numerador = nume1 + nume2
 
-        print(f"\nA soma das duas frações: {novo_numerador} / {mmc}")
+        print(f'\nA soma das duas frações: {novo_numerador} / {mmc}')
         simplifica_fracao(novo_numerador, mmc)
 
         novo_numerador = nume1 - nume2
-        print(f"\nA subtração das duas frações: {novo_numerador} / {mmc}")
+        print(f'\nA subtração das duas frações: {novo_numerador} / {mmc}')
         simplifica_fracao(novo_numerador, mmc)
 
     novo_numerador = numerador1 * numerador2
     novo_denominador = denominador1 * denominador2
-    print(f"\nO produto das duas frações: {novo_numerador} / {novo_denominador}")
+    print(
+        f'\nO produto das duas frações: {novo_numerador} / {novo_denominador}'
+    )
     simplifica_fracao(novo_numerador, novo_denominador)
 
     novo_numerador = numerador1 * denominador2
     novo_denominador = denominador1 * numerador2
-    print(f"\nO quociente das duas frações: {novo_numerador} / {novo_denominador}")
+    print(
+        f'\nO quociente das duas frações: {novo_numerador} / {novo_denominador}'
+    )
     simplifica_fracao(novo_numerador, novo_denominador)
 
 
