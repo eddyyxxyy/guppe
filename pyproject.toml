@@ -16,6 +16,7 @@ pipdeptree = "^2.3.1"
 pip-autoremove = "^0.10.0"
 isort = "^5.10.1"
 blue = "^0.9.1"
+pre-commit = "^2.20.0"
 
 [build-system]
 requires = ["poetry-core"]
