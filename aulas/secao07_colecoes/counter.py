@@ -37,8 +37,8 @@ Exemplo 3:
 
 from collections import Counter
 
-texto = """"""A Wikipédia é um projeto de enciclopédia colaborativa, universal e multilíngue estabelecido na internet sob o
- princípio wiki. Tem como propósito fornecer um conteúdo livre, objetivo e verificável, que todos possam editar
+texto = """"""A Wikipédia é um projeto de enciclopédia colaborativa, universal e multilíngue estabelecido na internet
+ sob o princípio wiki. Tem como propósito fornecer um conteúdo livre, objetivo e verificável, que todos possam editar
  e melhorar. O projeto é definido pelos princípios fundadores e o conteúdo é disponibilizado sob a licença Creative
  Commons BY-SA e pode ser reutilizado sob a mesma licença, desde que respeitando os termos de uso. Todos podem publicar
  conteúdo on-line desde que criem uma conta e sigam as regras básicas, como verificabilidade ou notoriedade.""""""
