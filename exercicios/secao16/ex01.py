@@ -1,12 +1,11 @@
 """
-1) Crie uma classe para representar uma pessoa, como os atirbutos privados de
+1) Crie uma classe para representar uma pessoa, como os atributos privados de
 nome, idade e altura. Crie os métodos públicos necessários para sets e gets e
 também um método para imprimir os dados de uma pessoa.
 """
 
 
 class Person:
-
     def __init__(self, name: str, age: int, height: float):
         self._name = name
         self._age = age
