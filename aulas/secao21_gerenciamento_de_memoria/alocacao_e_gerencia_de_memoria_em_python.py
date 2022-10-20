@@ -2,7 +2,7 @@
 Alocação e Gerência de Memória
 
 Em nosso computador, temos diversos componentes.
-Entre eles, a memória é uma peça chave para tod0
+Entre eles, a memória é uma peça chave para todo
 o funcionamento da máquina.
 
 A Memória RAM que é onde todos os programas e o
