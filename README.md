@@ -1,4 +1,4 @@
-# Programação em Python
+# Programação em Python (Finalizado)
 
 Aqui neste repositório estão minhas **anotações** e realização de **exercicios** do curso da Geek University
 "Programação em Python do básico ao avançado".
